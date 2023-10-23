@@ -1,11 +1,14 @@
-import styles from '../styles/styles.module.css'
-import Image from '../components/Image.js'
-function Home() {
-        return (
-            <div className={styles.parallaxOuter}>
-                <Image></Image>
-            </div>
-        );
-}
-export default Home;
+import ImageOne from '../components/ImageOne';
+import ImageTwo from '../components/ImageTwo';
+import ImageThree from '../components/ImageThree';
 
+function Home(){
+    return(
+        <div>
+            <ImageOne></ImageOne>
+            <ImageTwo></ImageTwo>
+            <ImageThree></ImageThree>
+        </div>
+    )
+}
+export default Home
