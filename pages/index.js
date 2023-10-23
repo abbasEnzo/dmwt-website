@@ -1,10 +1,9 @@
-import React from "react";
 import styles from '../styles/styles.module.css'
+import Image from '../components/Image.js'
 function Home() {
         return (
             <div className={styles.parallaxOuter}>
-                <div className={styles.parallax}></div>
-                <img src={}/>
+                <Image></Image>
             </div>
         );
 }
