@@ -1,0 +1,12 @@
+.parallaxOuter{
+    height: 100vh;
+    width: auto;
+    background-color: red;
+    justify-items: center;
+}
+.parallax{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    background-color: aqua;
+}
