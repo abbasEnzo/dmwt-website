@@ -1,4 +1,5 @@
 import {Parallax} from 'react-parallax';
+import TextBox from "./TextBox";
 
 const ImageOne = () => (
     <Parallax className={'image'} bgImage={'/firstImage.webp'} strength={600}>
