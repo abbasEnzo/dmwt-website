@@ -1,10 +1,10 @@
 import {Parallax} from 'react-parallax';
 
-const ImageOne = () => (
-    <Parallax className={'image'} bgImage={'/thirdImage.jpg'} strength={500}>
-        <div className={'content'}>
+const ImageThree= () => (
+    <Parallax className={'image'} bgImage={'/thirdImage.jpg'} strength={600}>
+        <div className={'container'}>
             <span className={'img-text'}>Frau wenn sie erik sieht</span>
         </div>
     </Parallax>
 )
-export default ImageOne;
+export default ImageThree;
