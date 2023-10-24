@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import ImageOne from '../components/ImageOne';
 import ImageTwo from '../components/ImageTwo';
 import ImageThree from '../components/ImageThree';
+import SurveyPage from "../components/SurveyPage";
 
 function Home() {
     useEffect(() => {
@@ -27,6 +28,7 @@ function Home() {
         <div>
             <ImageOne></ImageOne>
             <ImageTwo></ImageTwo>
+            <SurveyPage></SurveyPage>
             <ImageThree></ImageThree>
         </div>
     );
