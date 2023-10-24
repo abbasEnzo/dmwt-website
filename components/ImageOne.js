@@ -1,9 +1,32 @@
 import {Parallax} from 'react-parallax';
 
 const ImageOne = () => (
-    <Parallax className={'image'} bgImage={'/firstImage.jpg'} strength={600}>
+    <Parallax className={'image'} bgImage={'/firstImage.webp'} strength={600}>
         <div className={'container'}>
-            <span className={'img-text'}>Hallooooo</span>
+            <TextBox
+                idBoxShadow = 'boxShadowOne'
+                idTextBox = 'textBoxOne'
+                headline = "Cockmaster"
+                text="aksdjflajskledfjklasjdklfalksdjflkj
+                ajlksdfjklasjdlfkjaklsdjlfkjslkjdlkfjal
+                alksdjfklajsldkfjlkajskldfjaklsjldkfjlas
+                adfffffffffffffffffffffffffffffffff
+                adsfffffffffffffffffffffffffffffffffffff
+                asdffffffffffffffffffffffffffffffffffff
+                IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+                IIIIIIIIIIIIIIIIIIdaosd Enzpo stinasj
+                asdfasdfasdfaaaaaaaaaaaaasdf
+                asdfaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                asdfffffffffffffffffffffffffffffff
+                adfffffffffffffffffffffffffffffffff
+                adsfffffffffffffffffffffffffffffffffffff
+                asdffffffffffffffffffffffffffffffffffffIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+                IIIIIIIIIIIIIIIIIIdaosd Enzpo stinasj
+                asdfasdfasdfaaaaaaaaaaaaasdf
+                asdfaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                asdfffffffffffffffffffffffffffffff
+                adfffffffffffffffffffffffffffffffff"
+            ></TextBox>
         </div>
     </Parallax>
 )
