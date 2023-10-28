@@ -1,26 +1,13 @@
 import React, { useState } from 'react';
-import { Router, Route, Link } from "react-router-dom";
-import Home from "./index";
+import { Router, Route, Link, useHistory } from "react-router-dom";
 
-
-function navigateHome() {
-<Router>
-    <Route>
-        <Route path ="./index.js" element ={<Comments/>}/>
-    </Route>
-</Router>
-}
-
-function pageFetch (){
-    //Was auch immer ausgegeben wird kp von js syntax wird gleich gegoogelt
-    return(
+const toMainpage = () => {
+    return (
         <div>
-            <p>
-
-            </p>
-            <button onClick={navigateHome}>Home</button>
+            <button>
+                <Link to="/index.js">Back to the Homepage</Link>
+            </button>
         </div>
     );
-
-}
-export default pageFetch;
+};
+export default toMainpage();
