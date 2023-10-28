@@ -1,3 +1,4 @@
+import React from 'react'
 import useSWR from 'swr';
 const url = 'https://jsonplaceholder.typicode.com/comments';
 const fetcher = (url) => fetch(url).then((res)=> res.json());
@@ -26,11 +27,12 @@ export default function Fetch(){
         return <p>Loading comments....</p>;
     }
 
+    const resultingComment = comments.slice(0,10)
     return(
         <ul>
-            {comments.map((comment,index)=>(
+            {resultingComment.map((resultingComment,index)=>(
                 <li key = {index}>
-                    {comment.name}
+                    {resultingComment.name}
                 </li>
             ))}
         </ul>
