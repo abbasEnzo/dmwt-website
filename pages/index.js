@@ -5,9 +5,11 @@ import ImageTwo from '../components/ImageTwo';
 import ImageThree from '../components/ImageThree';
 import SurveyPage from "../components/SurveyPage";
 
+
 function Home() {
     useEffect(() => {
         if (typeof window !== 'undefined') {
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     console.log(entry);
