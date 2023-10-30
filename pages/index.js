@@ -4,6 +4,7 @@ import ImageOne from '../components/ImageOne';
 import ImageTwo from '../components/ImageTwo';
 import ImageThree from '../components/ImageThree';
 import SurveyPage from "../components/SurveyPage";
+import TitlePage from "../components/TitlePage2";
 
 function Home() {
     useEffect(() => {
@@ -26,6 +27,7 @@ function Home() {
 
     return (
         <div>
+            <TitlePage></TitlePage>
             <ImageOne></ImageOne>
             <ImageTwo></ImageTwo>
             <SurveyPage></SurveyPage>

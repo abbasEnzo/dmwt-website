@@ -7,7 +7,7 @@ const ImageTwo = () => (
             <TextBox
                 idBoxShadow  = 'boxShadowTwo'
                 idTextBox = 'textBoxTwo'
-                headline = "Suslord"
+                headline = "Gebt ein Daumen hoch"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Proin sagittis nisl rhoncus mattis.
                 Pulvinar pellentesque habitant morbi tristique senectus et. Mi tempus imperdiet nulla malesuada pellentesque elit eget.
