@@ -4,8 +4,8 @@ import ImageOne from '../components/ImageOne';
 import ImageTwo from '../components/ImageTwo';
 import ImageThree from '../components/ImageThree';
 import SurveyPage from "../components/SurveyPage";
-import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
-import index2 from "./index2";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Link from "next/link";
 
 
 function Home() {
@@ -29,26 +29,22 @@ function Home() {
     }, []);
 
     return (
-        <Router>
+
+        <div>
+            <ImageOne></ImageOne>
+            <ImageTwo></ImageTwo>
+            <SurveyPage></SurveyPage>
+            <ImageThree></ImageThree>
             <div>
-                    <ImageOne></ImageOne>
-                    <ImageTwo></ImageTwo>
-                    <SurveyPage></SurveyPage>
-                    <ImageThree></ImageThree>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="./index2.js">index2</Link>
-                        </li>
-                    </ul>
-                </nav>
-                <Switch>
-                    <Route path="./index2.js" component={index2}></Route>
-                </Switch>
+                <link href="/index2">
+                    <a>
+                        <button>To the second page</button>
+                    </a>
+                </link>
             </div>
-        </Router>
+        </div>
+
     );
+
 }
-
-
 export default Home;
