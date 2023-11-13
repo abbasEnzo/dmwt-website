@@ -13,7 +13,7 @@ const images = [
     "/Eisbär.jpg",
     "/Flut.jpg",
     "/Müllberg.jpg",
-    "/One World.jpg",
+    "/OurFutureText.png",
     "/SchmelzenDesPolareises.jpg",
     "/Smog.jpg",
     "/Tornado.jpg",
