@@ -10,7 +10,13 @@ const OurResponability= () => (
             }}>Our Responsability</h3>
             <p style={{
                 bottom: "40px",
-            }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam animi beatae ducimus illo impedit officia optio quae, quaerat quis, quos soluta tempora temporibus voluptas. Ab ad, aliquid consequuntur corporis cum deserunt dolor dolorem doloremque doloribus ducimus ea eos ex fuga hic id, iste itaque iure magnam minima molestias nam neque nostrum officiis quas quasi reiciendis rem ullam vero voluptas voluptate? Aut dolor dolores esse iusto laborum magni nobis quaerat reiciendis ullam. A aut deserunt eos est eveniet ipsam iusto maxime molestiae neque nisi obcaecati porro soluta, tempora unde, voluptatem! Amet error officia pariatur quisquam ratione sed. Aliquam aperiam aspernatur cupiditate delectus dignissimos ea, fugiat, illo, magni molestiae necessitatibus nisi nostrum soluta velit. </p>
+            }}>Addressing climate change is a responsibility we all share. It's mainly caused by human actions like burning fossil fuels and cutting down trees, which release greenhouse gases. So, each of us can help by making greener choices - like saving energy, cutting waste, and backing eco-friendly practices.
+
+                Our communities, governments, and businesses need to team up and create sustainable solutions. This includes going for cleaner energy, improving public transportation, and getting on board with green tech.
+
+                Countries need to work together too, setting global goals and enforcing eco-rules. Industries should also step up by adopting cleaner practices and investing in better tech.
+
+                In a nutshell, tackling climate change is a team effort. It's not just about being eco-conscious; it's about ensuring a better world for us and the future. So, let's act now! </p>
         </div>
         <div className="line" id={"lineOurResponsability"}></div>
     </Parallax>
