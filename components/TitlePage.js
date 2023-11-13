@@ -1,6 +1,6 @@
 import Plx from "react-plx";
 
-export default function App() {
+export default function TitlePage() {
     return (
         <div>
             <Plx
@@ -26,7 +26,7 @@ export default function App() {
                     zIndex: 100
                 }}
             >
-                <img style={{ width: "100%" }} src="bg.png" alt="foreground" />
+                <img style={{ width: "100%" }} src="/bg.png" alt="foreground" />
             </Plx>
             <Plx
                 parallaxData={[
@@ -83,7 +83,7 @@ export default function App() {
             <div
                 style={{
                     position: "fixed",
-                    lefft: 0,
+                    left: 0,
                     top: 0,
                     zIndex: 200,
                     paddingTop: "56%",

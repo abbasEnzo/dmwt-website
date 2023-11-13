@@ -1,8 +1,17 @@
 import {Parallax} from 'react-parallax';
 const SurveyPage = () => (
-    <Parallax className={'surveyImage'} bgImage={'/firstImage.webp'} strength={600} blur={4}>
+    <Parallax className={'surveyImage'} bgImage={'/stage3.jpg'} strength={600} blur={4}>
         <div className={'container hidden'}>
-            <div className={'surveyContainer'}></div>
+            <h1 style={{
+                bottom: "60px"
+            }}>Your personal Responsibility</h1>
+            <div className={"surveyButton"}>
+                <h3 style={{
+                    position: "relative",
+                    left: "4px",
+                }}>My technical CO2 footprint</h3>
+            </div>
+            {/*<div className={'surveyContainer'}></div>*/}
         </div>
     </Parallax>
 )

@@ -1,25 +1,17 @@
 import {Parallax} from "react-parallax";
-import TextBox from "./TextBox";
+import React from "react";
 
 const ImageTwo = () => (
-    <Parallax className={'image'} bgImage={'/secondImage.webp'} strength={600}>
-        <div className={'container'}>
-            <TextBox
-                idBoxShadow  = 'boxShadowTwo'
-                idTextBox = 'textBoxTwo'
-                headline = "Gebt ein Daumen hoch"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Proin sagittis nisl rhoncus mattis.
-                Pulvinar pellentesque habitant morbi tristique senectus et. Mi tempus imperdiet nulla malesuada pellentesque elit eget.
-                Malesuada nunc vel risus commodo viverra maecenas. Semper risus in hendrerit gravida rutrum.
-                Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. Ipsum dolor sit amet consectetur adipiscing elit duis.
-                Blandit aliquam etiam erat velit scelerisque in dictum non. At tempor commodo ullamcorper a lacus vestibulum.
-                Bibendum enim facilisis gravida neque convallis a cras semper. Lacinia quis vel eros donec ac odio tempor orci dapibus.
-                Eu nisl nunc mi ipsum. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum.
-                Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Elit eget gravida cum sociis natoque penatibus et magnis dis.
-                Ultrices in iaculis nunc sed augue lacus viverra. Eu facilisis sed odio morbi quis commodo."
-            ></TextBox>
+    <Parallax className={'image'} bgImage={'/stage2.jpg'} strength={600}>
+        <div className={'container hidden'} id={"containerImageTwo"}>
+            <h3 style={{
+
+            }}>Our Future</h3>
+            <p style={{
+                bottom: "40px",
+            }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam animi beatae ducimus illo impedit officia optio quae, quaerat quis, quos soluta tempora temporibus voluptas. Ab ad, aliquid consequuntur corporis cum deserunt dolor dolorem doloremque doloribus ducimus ea eos ex fuga hic id, iste itaque iure magnam minima molestias nam neque nostrum officiis quas quasi reiciendis rem ullam vero voluptas voluptate? Aut dolor dolores esse iusto laborum magni nobis quaerat reiciendis ullam. A aut deserunt eos est eveniet ipsam iusto maxime molestiae neque nisi obcaecati porro soluta, tempora unde, voluptatem! Amet error officia pariatur quisquam ratione sed. Aliquam aperiam aspernatur cupiditate delectus dignissimos ea, fugiat, illo, magni molestiae necessitatibus nisi nostrum soluta velit. </p>
         </div>
+        <div className="line" id={"lineImageTwo"}></div>
     </Parallax>
 )
 
