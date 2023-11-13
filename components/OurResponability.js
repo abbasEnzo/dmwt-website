@@ -6,9 +6,10 @@ const OurResponability= () => (
     <Parallax className={'image'} bgImage={'/test.jpg'} strength={600}>
         <div className={'container hidden'} id={"containerImageThree"}>
             <h3 style={{
-
+                color: "#333",
             }}>Our Responsability</h3>
             <p style={{
+                color: "#333",
                 bottom: "40px",
             }}>Addressing climate change is a responsibility we all share. It's mainly caused by human actions like burning fossil fuels and cutting down trees, which release greenhouse gases. So, each of us can help by making greener choices - like saving energy, cutting waste, and backing eco-friendly practices.
 
