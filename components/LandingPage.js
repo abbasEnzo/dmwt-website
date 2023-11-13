@@ -1,6 +1,5 @@
 import Plx from "react-plx";
 import React from "react";
-import {Parallax} from "react-parallax";
 import OurFuture from "./OurFuture";
 export default function LandingPage() {
     return (

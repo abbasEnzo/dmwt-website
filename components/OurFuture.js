@@ -1,18 +1,92 @@
-import {Parallax} from "react-parallax";
-import React from "react";
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import styles from '../styles/ourFuture.module.scss'
+import Image from 'next/image';
+import Lenis from '@studio-freight/lenis'
+import { useTransform, useScroll, motion } from 'framer-motion';
 
-const OurFuture = () => (
-    <Parallax className={'image'} bgImage={'/stage2.jpg'} strength={600}>
-        <div className={'container hidden'} id={"containerImageTwo"}>
-            <h3 style={{
+const images = [
+    "/1.jpg",
+    "/2.jpg",
+    "/3.jpg",
+    "/4.jpg",
+    "/5.jpg",
+    "/6.jpg",
+    "/7.jpg",
+    "/8.jpg",
+    "/9.jpg",
+    "/10.jpg",
+    "/11.jpg",
+    "/12.jpg",
+]
 
-            }}>Our Future</h3>
-            <p style={{
-                bottom: "40px",
-            }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam animi beatae ducimus illo impedit officia optio quae, quaerat quis, quos soluta tempora temporibus voluptas. Ab ad, aliquid consequuntur corporis cum deserunt dolor dolorem doloremque doloribus ducimus ea eos ex fuga hic id, iste itaque iure magnam minima molestias nam neque nostrum officiis quas quasi reiciendis rem ullam vero voluptas voluptate? Aut dolor dolores esse iusto laborum magni nobis quaerat reiciendis ullam. A aut deserunt eos est eveniet ipsam iusto maxime molestiae neque nisi obcaecati porro soluta, tempora unde, voluptatem! Amet error officia pariatur quisquam ratione sed. Aliquam aperiam aspernatur cupiditate delectus dignissimos ea, fugiat, illo, magni molestiae necessitatibus nisi nostrum soluta velit. </p>
-        </div>
-        <div className="line" id={"lineOurFuture"}></div>
-    </Parallax>
-)
+export default function Home() {
 
-export default OurFuture;
+    const gallery = useRef(null);
+    const [dimension, setDimension] = useState({width:0, height:0});
+
+    const { scrollYProgress } = useScroll({
+        target: gallery,
+        offset: ['start end', 'end start']
+    })
+    const { height } = dimension;
+    const y = useTransform(scrollYProgress, [0, 1], [0, height * 2])
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
+    const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25])
+    const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3])
+
+    useEffect( () => {
+        const lenis = new Lenis()
+
+        const raf = (time) => {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        const resize = () => {
+            setDimension({width: window.innerWidth, height: window.innerHeight})
+        }
+
+        window.addEventListener("resize", resize)
+        requestAnimationFrame(raf);
+        resize();
+
+        return () => {
+            window.removeEventListener("resize", resize);
+        }
+    }, [])
+
+    return (
+        <main className={styles.main}>
+            <div className={styles.spacer}></div>
+            <div ref={gallery} className={styles.gallery}>
+                <Column images={[images[0], images[1], images[2]]} y={y}/>
+                <Column images={[images[3], images[4], images[5]]} y={y2}/>
+                <Column images={[images[6], images[7], images[8]]} y={y3}/>
+                <Column images={[images[9], images[10], images[11]]} y={y4}/>
+            </div>
+            {/*<div className={styles.spacer}></div>*/}
+        </main>
+    )
+}
+
+const Column = ({images, y}) => {
+    return (
+        <motion.div
+            className={styles.column}
+            style={{y}}
+        >
+            {
+                images.map( (src, i) => {
+                    return <div key={i} className={styles.imageContainer}>
+                        <Image
+                            src={`${src}`}
+                            alt='image'
+                            fill
+                        />
+                    </div>
+                })
+            }
+        </motion.div>
+    )
+}

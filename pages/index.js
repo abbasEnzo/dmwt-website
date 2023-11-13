@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import OurResponability from '../components/OurResponability';
 import SurveyPage from "../components/SurveyPage";
 import LandingPage from "../components/LandingPage";
+import OurFutureTest from "../components/OurFuture";
 
 function Home() {
     useEffect(() => {
@@ -27,6 +28,7 @@ function Home() {
             <LandingPage></LandingPage>
             <OurResponability></OurResponability>
             <SurveyPage></SurveyPage>
+            {/*<OurFutureTest></OurFutureTest>*/}
         </div>
     );
 }
