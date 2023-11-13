@@ -90,4 +90,6 @@ const ThreeModelViewer = () => {
     return <div id="model-container"></div>;
 };
 
-export default ThreeModelViewer;*/
+export default ThreeModelViewer;
+
+*/
