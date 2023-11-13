@@ -1,4 +1,5 @@
 import {Parallax} from 'react-parallax';
+import ThreeModelViewer from "./3DModelBehavior";
 const SurveyPage = () => (
     <Parallax className={'surveyImage'} bgImage={'/stage3.jpg'} strength={600} blur={4}>
         <div className={'container hidden'}>
@@ -11,7 +12,7 @@ const SurveyPage = () => (
                     left: "4px",
                 }}>My technical CO2 footprint</h3>
             </div>
-            {/*<div className={'surveyContainer'}></div>*/}
+            {<div className={'surveyContainer'}><ThreeModelViewer></ThreeModelViewer></div>}
         </div>
     </Parallax>
 )
