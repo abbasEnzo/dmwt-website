@@ -1,6 +1,8 @@
 import Plx from "react-plx";
-
-export default function TitlePage() {
+import React from "react";
+import {Parallax} from "react-parallax";
+import OurFuture from "./OurFuture";
+export default function LandingPage() {
     return (
         <div>
             <Plx
@@ -12,7 +14,7 @@ export default function TitlePage() {
                         properties: [
                             {
                                 startValue: 1,
-                                endValue: 1.6,
+                                endValue: 3.9,
                                 property: "scale"
                             }
                         ]
@@ -26,7 +28,7 @@ export default function TitlePage() {
                     zIndex: 100
                 }}
             >
-                <img style={{ width: "100%" }} src="/bg.png" alt="foreground" />
+                <img style={{ width: "100%" }} src="/LandingPageForeground.png" alt="foreground" />
             </Plx>
             <Plx
                 parallaxData={[
@@ -49,7 +51,7 @@ export default function TitlePage() {
                     width: "100%"
                 }}
             >
-                <img style={{ width: "100%" }} src="/TitleBackground.jpg" alt="background" />
+                <img style={{ width: "100%" }} src="/landingPageBackground.jpg" alt="background" />
             </Plx>
             <Plx
                 parallaxData={[
@@ -58,8 +60,8 @@ export default function TitlePage() {
                         end: 400,
                         properties: [
                             {
-                                startValue: 1,
-                                endValue: 0,
+                                startValue: 0,
+                                endValue: 1,
                                 property: "opacity"
                             }
                         ]
@@ -72,13 +74,13 @@ export default function TitlePage() {
                     width: "100%"
                 }}
             >
-                <img
-                    style={{
-                        width: "30vw"
-                    }}
-                    src="/text-image.jpg"
-                    alt="Titel"
-                />
+                <h1 style={{
+                    bottom: "20vh",
+                }}>The Power of your Click</h1>
+                <h3 style={{
+                    bottom: "24vh",
+                }}>Green Choices, Brighter Tomorrows</h3>
+                <div className="agendaBar"></div>
             </Plx>
             <div
                 style={{
@@ -98,6 +100,7 @@ export default function TitlePage() {
                     }}
                 ></div>
             </div>
+            <OurFuture></OurFuture>
         </div>
     );
 }

@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import ImageOne from '../components/ImageOne';
-import ImageTwo from '../components/ImageTwo';
-import ImageThree from '../components/ImageThree';
+import OurResponability from '../components/OurResponability';
 import SurveyPage from "../components/SurveyPage";
-import TitlePage from "../components/TitlePage";
+import LandingPage from "../components/LandingPage";
 
 function Home() {
     useEffect(() => {
@@ -26,10 +24,8 @@ function Home() {
 
     return (
         <div>
-            <TitlePage></TitlePage>
-            <ImageOne></ImageOne>
-            <ImageTwo></ImageTwo>
-            <ImageThree></ImageThree>
+            <LandingPage></LandingPage>
+            <OurResponability></OurResponability>
             <SurveyPage></SurveyPage>
         </div>
     );
