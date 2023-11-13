@@ -11,7 +11,6 @@ const OurResponability= () => (
             <p style={{
                 color: "#333",
                 bottom: "40px",
-
             }}>Addressing climate change is a responsibility we all share. It's mainly caused by human actions like burning fossil fuels and cutting down trees, which release greenhouse gases. So, each of us can help by making greener choices - like saving energy, cutting waste, and backing eco-friendly practices.
 
                 Our communities, governments, and businesses need to team up and create sustainable solutions. This includes going for cleaner energy, improving public transportation, and getting on board with green tech.

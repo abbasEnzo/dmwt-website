@@ -1,3 +1,4 @@
+/*
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader';
@@ -89,4 +90,4 @@ const ThreeModelViewer = () => {
     return <div id="model-container"></div>;
 };
 
-export default ThreeModelViewer;
+export default ThreeModelViewer;*/

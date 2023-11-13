@@ -12,7 +12,7 @@ const SurveyPage = () => (
                     left: "4px",
                 }}>My technical CO2 footprint</h3>
             </div>
-            {<div className={'surveyContainer'}><ThreeModelViewer></ThreeModelViewer></div>}
+            {/*{<div className={'surveyContainer'}><ThreeModelViewer></ThreeModelViewer></div>}*/}
         </div>
     </Parallax>
 )
