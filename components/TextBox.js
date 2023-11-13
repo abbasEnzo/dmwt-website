@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const TextBox = ({idBoxShadow, idTextBox, headline, text}) => {
     return (
         <div className={'text-box hidden'} id={idBoxShadow}>
