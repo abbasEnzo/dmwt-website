@@ -1,3 +1,4 @@
+
 import {Parallax} from 'react-parallax';
 import ThreeModelViewer from "./3DModelBehavior";
 const SurveyPage = () => (
@@ -12,9 +13,12 @@ const SurveyPage = () => (
                     left: "4px",
                 }}>My technical CO2 footprint</h3>
             </div>
+{/*
             {<div className={'surveyContainer'}><ThreeModelViewer></ThreeModelViewer></div>}
+*/}
         </div>
     </Parallax>
 )
 
 export default SurveyPage;
+
