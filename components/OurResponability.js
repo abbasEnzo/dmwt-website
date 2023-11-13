@@ -3,13 +3,14 @@ import TextBox from "./TextBox";
 import React from "react";
 
 const OurResponability= () => (
-    <Parallax className={'image'} bgImage={'/test.jpg'} strength={600}>
+    <Parallax className={'image'} bgImage={'/test.png'} strength={600}>
         <div className={'container hidden'} id={"containerImageThree"}>
             <h3 style={{
 
             }}>Our Responsability</h3>
             <p style={{
                 bottom: "40px",
+
             }}>Addressing climate change is a responsibility we all share. It's mainly caused by human actions like burning fossil fuels and cutting down trees, which release greenhouse gases. So, each of us can help by making greener choices - like saving energy, cutting waste, and backing eco-friendly practices.
 
                 Our communities, governments, and businesses need to team up and create sustainable solutions. This includes going for cleaner energy, improving public transportation, and getting on board with green tech.

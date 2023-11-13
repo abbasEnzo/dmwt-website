@@ -12,12 +12,12 @@ const images = [
     "/Eisberg.jpg",
     "/Eisbär.jpg",
     "/Flut.jpg",
-    "/Müllberg.jpg",
+    "/Dürre.jpg",
     "/OurFutureText.png",
     "/SchmelzenDesPolareises.jpg",
     "/Smog.jpg",
     "/Tornado.jpg",
-    "/Dürre.jpg",
+    "/Müllberg.jpg",
 ]
 
 export default function Home() {
