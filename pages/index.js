@@ -26,9 +26,8 @@ function Home() {
     return (
         <div>
             <LandingPage></LandingPage>
-            <OurResponability></OurResponability>
             <SurveyPage></SurveyPage>
-            {/*<OurFutureTest></OurFutureTest>*/}
+            <OurResponability></OurResponability>
         </div>
     );
 }

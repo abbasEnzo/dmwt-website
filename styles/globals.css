@@ -206,3 +206,35 @@ h1{
     filter: blur(0);
     transform: translateX(0);
 }
+.ourResponsabilityButtons{
+
+    position: fixed;
+    z-index: 300;
+    border-radius: 15px;
+    background-color: #333333;
+    border: none;
+}
+#ourResponsabilityButtonTopRight{
+    height: 30vh;
+    width: 90vh;
+    top: 10vh;
+    right: 5vh;
+}
+#ourResponsabilityButtonBottomLeft{
+    height: 30vh;
+    width: 90vh;
+    top: 45vh;
+    right: 70vh;
+}
+#ourResponsabilityButtonTopLeft{
+    height: 30vh;
+    width: 60vh;
+    top: 10vh;
+    right: 100vh;
+}
+#ourResponsabilityButtonBottomRight {
+    height: 30vh;
+    width: 60vh;
+    top: 45vh;
+    left: 15vh;
+}

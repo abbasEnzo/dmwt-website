@@ -1,25 +1,55 @@
 import {Parallax} from 'react-parallax';
-import TextBox from "./TextBox";
-import React from "react";
+import {motion} from 'framer-motion';
+import React, {useState} from "react";
 
-const OurResponability= () => (
-    <Parallax className={'image'} bgImage={'/test.png'} strength={600}>
-        <div className={'container hidden'} id={"containerImageThree"}>
-            <h3 style={{
-                color: "#333",
-            }}>Our Responsability</h3>
-            <p style={{
-                color: "#333",
-                bottom: "40px",
-            }}>Addressing climate change is a responsibility we all share. It's mainly caused by human actions like burning fossil fuels and cutting down trees, which release greenhouse gases. So, each of us can help by making greener choices - like saving energy, cutting waste, and backing eco-friendly practices.
 
-                Our communities, governments, and businesses need to team up and create sustainable solutions. This includes going for cleaner energy, improving public transportation, and getting on board with green tech.
 
-                Countries need to work together too, setting global goals and enforcing eco-rules. Industries should also step up by adopting cleaner practices and investing in better tech.
 
-                In a nutshell, tackling climate change is a team effort. It's not just about being eco-conscious; it's about ensuring a better world for us and the future. So, let's act now! </p>
-        </div>
-        <div className="line" id={"lineOurResponsability"}></div>
-    </Parallax>
-)
+function OurResponability(){
+    const [modalOpen, setModalOpen] = useState(false);
+    const close = () => setModalOpen(false);
+    const open = () => setModalOpen(true);
+    return(
+        <Parallax className={'image'} bgImage={'/test.png'} strength={600} style={{ zIndex: 1000}}>
+            <div className={'container hidden'} id={"containerImageThree"} style={{ zIndex: 1000}}>
+                <h1 style={{
+                    bottom: "10vh",
+                    right: "44vh",
+                }}>Our Responsability</h1>
+                <motion.button
+                    className={"ourResponsabilityButtons"}
+                    id={"ourResponsabilityButtonTopLeft"}
+                    onClick={() => (modalOpen ? close() : open())}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                >187 Straßenbande
+                </motion.button>
+                <motion.button
+                    className={"ourResponsabilityButtons"}
+                    id={"ourResponsabilityButtonBottomRight"}
+                    onClick={() => (modalOpen ? close() : open())}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                >187 Straßenbande
+                </motion.button>
+                <motion.button
+                    className={"ourResponsabilityButtons"}
+                    id={"ourResponsabilityButtonBottomLeft"}
+                    onClick={() => (modalOpen ? close() : open())}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                >187 Straßenbande
+                </motion.button>
+                <motion.button
+                    className={"ourResponsabilityButtons"}
+                    id={"ourResponsabilityButtonTopRight"}
+                    onClick={() => (modalOpen ? close() : open())}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                >187 Straßenbande
+                </motion.button>
+            </div>
+        </Parallax>
+    )
+}
 export default OurResponability;
