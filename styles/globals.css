@@ -87,7 +87,7 @@
 .progress-bar {
     position: fixed;
     left: 0;
-    top: 0;
+    top: 8vh;
     height: 10px;
     width: 100%;
     background-color: #5bc37e;
@@ -184,15 +184,25 @@ h1{
     position: relative;
     font-size: 80px;
 }
-.agendaBar{
-    height: 7vh;
-    width: 80vh;
+.agendaBar {
+    z-index: 1001;
+    height: 8vh;
+    width: 100%;
     background-color: #333333;
-    position: absolute;
-    bottom: 70vh;
-    left: 120vh;
-    border-radius: 5px;
-
+    position: fixed;
+    align-items: center;
+    justify-items: center;
+}
+.agendaBarButtons{
+    bottom: 3px;
+    position: relative;
+    font-family: Lexend,sans-serif;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px;
 }
 .hidden{
     opacity:0;
@@ -207,18 +217,21 @@ h1{
     transform: translateX(0);
 }
 .ourResponsabilityButtons{
-
     position: fixed;
     z-index: 300;
     border-radius: 15px;
     background-color: #333333;
+    color: white;
     border: none;
+    font-family: Lexend;
+    font-weight: bold;
 }
 #ourResponsabilityButtonTopRight{
     height: 30vh;
     width: 90vh;
     top: 10vh;
     right: 5vh;
+
 }
 #ourResponsabilityButtonBottomLeft{
     height: 30vh;
@@ -238,3 +251,17 @@ h1{
     top: 45vh;
     left: 15vh;
 }
+#ourResponsabilityButtonClicked {
+    height: 60vh;
+    width: 150vh;
+    position: fixed;
+    top: 5vh;
+    right: 5vh;
+    z-index: 300;
+    border-radius: 15px;
+    background-color: #333333;
+    border: none;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+

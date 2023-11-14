@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import OurResponability from '../components/OurResponability';
+import OurResponsability from '../components/OurResponsability';
 import SurveyPage from "../components/SurveyPage";
 import LandingPage from "../components/LandingPage";
-import OurFutureTest from "../components/OurFuture";
+import AgendaBox from "../components/AgendaBox";
 
 function Home() {
     useEffect(() => {
@@ -25,9 +25,10 @@ function Home() {
 
     return (
         <div>
+            <AgendaBox></AgendaBox>
             <LandingPage></LandingPage>
+            <OurResponsability></OurResponsability>
             <SurveyPage></SurveyPage>
-            <OurResponability></OurResponability>
         </div>
     );
 }

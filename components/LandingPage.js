@@ -27,7 +27,7 @@ export default function LandingPage() {
                     zIndex: 100
                 }}
             >
-                <img style={{ width: "100%" }} src="/LandingPageForeground.png" alt="foreground" />
+                <img style={{ filter: "blur(1px)", width: "100%" }} src="/LandingPageForeground.png" alt="foreground" />
             </Plx>
             <Plx
                 parallaxData={[
@@ -73,13 +73,14 @@ export default function LandingPage() {
                     width: "100%"
                 }}
             >
+
                 <h1 style={{
                     bottom: "20vh",
                 }}>The Power of your Click</h1>
                 <h3 style={{
                     bottom: "24vh",
                 }}>Green Choices, Brighter Tomorrows</h3>
-                <div className="agendaBar"></div>
+
             </Plx>
             <div
                 style={{
@@ -88,7 +89,7 @@ export default function LandingPage() {
                     top: 0,
                     zIndex: 200,
                     paddingTop: "56%",
-                    height: "400vh",
+                    height: "40vh",
                     width: "100%"
                 }}
             >
@@ -99,6 +100,7 @@ export default function LandingPage() {
                     }}
                 ></div>
             </div>
+            <div id={"section1"}></div>
             <OurFuture></OurFuture>
         </div>
     );
