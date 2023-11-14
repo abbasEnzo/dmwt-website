@@ -50,7 +50,7 @@ export default function LandingPage() {
                     width: "100%"
                 }}
             >
-                <img style={{ width: "100%" }} src="/landingPageBackground.jpg" alt="background" />
+                <img style={{ width: "100%" }} src="/LandingPageBackgroundTest6.jpg" alt="background" />
             </Plx>
             <Plx
                 parallaxData={[

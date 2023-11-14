@@ -14,13 +14,12 @@
     }
 }
 .line{
-    border-style: dashed;
     border-width: thin;
     border-radius: 2px;
     border-color: white;
     color: transparent;
-    transform: rotate(45deg);
-    position: absolute;
+    transform: rotate(180deg);
+    position: relative;
 }
 #lineOurFuture{
     top: 3vh;
