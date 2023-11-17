@@ -32,8 +32,14 @@ function OurResponsability(){
                     right:"3vh",
                     whiteSpace: "nowrap",
                 }}>Our Responsability</h1>
-                <p style={{width: "80vh", bottom:"8vh"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deserunt eos rem repellat suscipit. Corporis dolore illum nobis pariatur! Ad doloribus ipsa laudantium molestias provident sint, veritatis! In molestias odio repellat vel. Accusamus accusantium debitis esse nemo. Accusamus asperiores aspernatur aut commodi consectetur, corporis deserunt eaque eligendi exercitationem facere fugit illo illum in laboriosam laudantium molestiae nam natus necessitatibus nemo neque nisi nulla odio omnis perferendis placeat possimus praesentium quae quam quisquam recusandae repudiandae similique sunt unde. Aliquid aspernatur dolorem earum enim laborum, maiores sequi tempore ullam voluptate voluptatem. Atque dolorum eius excepturi exercitationem fugiat hic, laboriosam molestiae molestias necessitatibus nesciunt officia pariatur praesentium quas qui quidem repellat soluta ullam unde ut, veritatis! Aut debitis dolore hic laudantium libero nesciunt nihil odit officia officiis omnis perspiciatis, quasi quidem sapiente tempore tenetur velit voluptas. Accusantium aliquam autem delectus dicta distinctio, dolorem eaque fuga fugiat incidunt iste iure laborum laudantium natus odit quaerat quas quibusdam quod reiciendis repudiandae sed. Aut, quo tempora? Aliquid cum dolorum eligendi eveniet explicabo fugiat molestias velit, voluptate? A accusantium at deleniti dolores est incidunt nisi numquam possimus sapiente vitae! Blanditiis inventore labore quidem ratione. Corporis error fuga quia quo totam? A expedita obcaecati, quasi quia saepe ullam!</p>
-                </div>
+                <p style={{width: "80vh", bottom:"8vh"}}>Addressing climate change is a responsibility we all share. It's mainly caused by human actions like burning fossil fuels and cutting down trees, which release greenhouse gases. So, each of us can help by making greener choices - like saving energy, cutting waste, and backing eco-friendly practices.
+
+                    Our communities, governments, and businesses need to team up and create sustainable solutions. This includes going for cleaner energy, improving public transportation, and getting on board with green tech.
+
+                    Countries need to work together too, setting global goals and enforcing eco-rules. Industries should also step up by adopting cleaner practices and investing in better tech.
+
+                    In a nutshell, tackling climate change is a team effort. It's not just about being eco-conscious; it's about ensuring a better world for us and the future. So, let's act now! </p>
+            </div>
             </div>
         </Parallax>
     )
