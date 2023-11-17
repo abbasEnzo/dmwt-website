@@ -3,6 +3,9 @@ import OurResponsability from '../components/OurResponsability';
 import SurveyPage from "../components/SurveyPage";
 import LandingPage from "../components/LandingPage";
 import AgendaBox from "../components/AgendaBox";
+import QuizPage from "../components/QuizPage";
+
+
 
 function Home() {
     useEffect(() => {
@@ -28,6 +31,7 @@ function Home() {
             <AgendaBox></AgendaBox>
             <LandingPage></LandingPage>
             <OurResponsability></OurResponsability>
+            <QuizPage></QuizPage>
             <SurveyPage></SurveyPage>
         </div>
     );

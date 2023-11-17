@@ -24,7 +24,7 @@ export default function LandingPage() {
                     left: 0,
                     top: 0,
                     width: "100%",
-                    zIndex: 100
+                    zIndex: 1
                 }}
             >
                 <img style={{ filter: "blur(1px)", width: "100%" }} src="/LandingPageForeground.png" alt="foreground" />
@@ -87,7 +87,7 @@ export default function LandingPage() {
                     position: "fixed",
                     left: 0,
                     top: 0,
-                    zIndex: 200,
+                    zIndex: 2,
                     paddingTop: "56%",
                     height: "40vh",
                     width: "100%"

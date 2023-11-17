@@ -35,7 +35,6 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    text-align-all: center;
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -149,14 +148,6 @@
     left: 20vh;
     top:14vh;
 }
-#containerImageThree{
-    text-align-all: center;
-    width: 80vh;
-    height: 10vh;
-    right: 20vh;
-    top:14vh;
-}
-
 p{
     position: relative;
     font-size: 20px;
@@ -187,21 +178,30 @@ h1{
     z-index: 1001;
     height: 8vh;
     width: 100%;
-    background-color: #333333;
+    background-color: #2d2d2d;
     position: fixed;
     align-items: center;
     justify-items: center;
 }
 .agendaBarButtons{
-    bottom: 3px;
+    padding-right: 35px;
+    top: 4px;
     position: relative;
     font-family: Lexend,sans-serif;
     background-color: transparent;
-    border: none;
+    border-right: solid;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-color: white;
     color: white;
     font-size: 25px;
     font-weight: bold;
     margin: 15px;
+}
+#lastAgendaButton{
+    border-color: transparent;
+    border-right: none;
 }
 .hidden{
     opacity:0;
@@ -215,52 +215,64 @@ h1{
     filter: blur(0);
     transform: translateX(0);
 }
-.ourResponsabilityButtons{
-    position: fixed;
-    z-index: 300;
-    border-radius: 15px;
-    background-color: #333333;
+.QuizPageBackground{
+    background-color: #2d2d2d;
+    color: #333333;
+    width: 100%;
+    height: 210vh;
+    z-index: 1000;
+    top: 200vh;
+    position: relative;
+}
+.QuestionBox{
+    display: block;
+    align-items: center;
+/*    background-color: #0070f3;*/
+    width: 100vh;
+    height: 40vh;
+    z-index: 2000;
+    position: absolute;
+    text-align: justify;
+}
+#QuestionBox1{
+    top: 12vh;
+    left:50vh;
+}
+#QuestionBox2{
+    top: 88vh;
+    left:50vh;
+}
+#QuestionBox3{
+    top: 158vh;
+    left:50vh;
+}
+.QuizButtons{
+    /*box-shadow: 3px 3px 2px grey;*/
+    margin: 20px;
+    height: 5vh;
+    width: 15vh;
+    color: #2d2d2d;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    font-weight: bold;;
+}
+.QuizTrueFalseBox{
+    position: relative;
+    bottom: 2vh;
+    left: 25vh;
+/*    background-color: #5bc37e;*/
+    width: 40vh;
+    height: 10vh;
+}
+.agendaLines{
     color: white;
-    border: none;
-    font-family: Lexend;
-    font-weight: bold;
+    background-color: white;
+    position: absolute;
+    height: 15px;
+    width: 5px;
+    z-index: 2000;
+    rotate: 90deg;
 }
-#ourResponsabilityButtonTopRight{
-    height: 30vh;
-    width: 90vh;
-    top: 10vh;
-    right: 5vh;
-
-}
-#ourResponsabilityButtonBottomLeft{
-    height: 30vh;
-    width: 90vh;
-    top: 45vh;
-    right: 70vh;
-}
-#ourResponsabilityButtonTopLeft{
-    height: 30vh;
-    width: 60vh;
-    top: 10vh;
-    right: 100vh;
-}
-#ourResponsabilityButtonBottomRight {
-    height: 30vh;
-    width: 60vh;
-    top: 45vh;
-    left: 15vh;
-}
-#ourResponsabilityButtonClicked {
-    height: 60vh;
-    width: 150vh;
-    position: fixed;
-    top: 5vh;
-    right: 5vh;
-    z-index: 300;
-    border-radius: 15px;
-    background-color: #333333;
-    border: none;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-}
-

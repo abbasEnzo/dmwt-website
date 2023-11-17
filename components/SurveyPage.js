@@ -2,7 +2,7 @@ import {Parallax} from 'react-parallax';
 import ThreeModelViewer from "./3DModelBehavior";
 const SurveyPage = () => (
     <Parallax className={'surveyImage'} bgImage={'/stage3.jpg'} strength={600} blur={4}>
-        <div id="section4">
+        <div id="section5">
         <div className={'container hidden'}>
             <h1 style={{
                 bottom: "60px"
