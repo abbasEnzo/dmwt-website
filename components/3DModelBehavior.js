@@ -1,4 +1,4 @@
-/*
+
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader';
@@ -22,7 +22,7 @@ const ThreeModelViewer = () => {
         //camera view and renderer setup
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(1350, 910);
         document.getElementById('model-container').appendChild(renderer.domElement);
 
         //Loader setup for 3D Model
@@ -92,4 +92,3 @@ const ThreeModelViewer = () => {
 
 export default ThreeModelViewer;
 
-*/

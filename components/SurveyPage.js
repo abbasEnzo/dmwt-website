@@ -1,25 +1,35 @@
 import {Parallax} from 'react-parallax';
 import ThreeModelViewer from "./3DModelBehavior";
-const SurveyPage = () => (
-    <Parallax className={'surveyImage'} bgImage={'/stage3.jpg'} strength={600} blur={4}>
-        <div id="section5">
-        <div className={'container hidden'}>
-            <h1 style={{
-                bottom: "60px"
-            }}>Your personal Responsibility</h1>
-            <div className={"surveyButton"}>
-                <h3 style={{
-                    position: "relative",
-                    left: "4px",
-                }}>My technical CO2 footprint</h3>
-            </div>
-{/*
-            {<div className={'surveyContainer'}><ThreeModelViewer></ThreeModelViewer></div>}
-*/}
-        </div>
-        </div>
-    </Parallax>
-)
+import React, { useState } from 'react';
+import {motion} from "framer-motion";
 
+const SurveyPage = () => {
+    const [isSurveyOpen, setSurveyOpen] = useState(false);
+
+    const [isVisible, setIsVisible] = useState(true);
+    const handleButtonClick = (event) => {
+        setIsVisible(!isVisible);
+        setSurveyOpen(!isSurveyOpen);
+    };
+    return (
+        <Parallax className={'surveyImage'} style={{zIndex : "1000",}} bgImage={'/stage3.jpg'} strength={600} blur={4}>
+            <div id="section5">
+                <div className={'container hidden'}>
+                    <h1 style={{
+                        bottom: "60px"
+                    }}>Your personal Responsibility</h1>
+                    {isVisible && (
+                        <motion.button className={"surveyButton"} whileHover={{scale : 1.2}} whileTap={{ scale: 0.9 }} onClick={handleButtonClick} style={{zIndex : "1000",}}>
+                            <h2>My technical CO2 footprint</h2>
+                        </motion.button>
+                    )}
+                    {isSurveyOpen && (
+                        <div className={'surveyContainer'}><ThreeModelViewer></ThreeModelViewer></div>
+                    )}
+                </div>
+            </div>
+        </Parallax>
+    )
+};
 export default SurveyPage;
 

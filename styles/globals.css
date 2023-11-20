@@ -162,6 +162,12 @@ h1{
     position: absolute;
     color: white;
 }
+h2{
+    font-size: 40px;
+    font-family: 'Lexend', sans-serif;
+    position: absolute;
+    color: white;
+}
 h3{
     font-family: 'Lexend', sans-serif;
     color: white;
