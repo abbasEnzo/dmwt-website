@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import OurResponsability from '../components/OurResponsability';
+import OurResponsibility from '../components/OurResponsibility';
 import SurveyPage from "../components/SurveyPage";
 import LandingPage from "../components/LandingPage";
 import AgendaBox from "../components/AgendaBox";
@@ -30,7 +30,7 @@ function Home() {
         <div>
             <AgendaBox></AgendaBox>
             <LandingPage></LandingPage>
-            <OurResponsability></OurResponsability>
+            <OurResponsibility></OurResponsibility>
             <QuizPage></QuizPage>
             <SurveyPage></SurveyPage>
         </div>

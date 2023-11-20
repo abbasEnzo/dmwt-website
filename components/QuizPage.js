@@ -7,12 +7,10 @@ import {motion} from "framer-motion";
 function QuizPage(){
     const [QuestionTwoText, setQuestionTwoText] = useState('A PC with a screensaver going can use well over 100W of power, compared with about 80W in sleep mode.');
 
-    // Funktion, um den Text zu ändern
     const handleQuestionTwoTextChange = () => {
         // Neuer Text, den du setzen möchtest
         const neuerText = 'False, A PC with a screensaver going can use well over 100W of power, compared with only about 10W in sleep mode. That\'s why powering down PCs in your home or office makes more sense from both an environmental and cost-saving perspective.';
 
-        // Text mit Hilfe von setH3Text ändern
         setQuestionTwoText(neuerText);
     };
     const [firstQuestionTrueClicked, setfirstQuestionTrueisClicked] = useState(false);

@@ -6,7 +6,7 @@ import {zip} from "three/addons/libs/fflate.module";
 
 
 
-function OurResponsability(){
+function OurResponsibility(){
     const [modal, toggleModal] = useState(false);
     const setModal = () => {
         toggleModal(!modal);
@@ -31,7 +31,7 @@ function OurResponsability(){
                     top: "8vh",
                     right:"3vh",
                     whiteSpace: "nowrap",
-                }}>Our Responsability</h1>
+                }}>Our Responsibility</h1>
                 <p style={{width: "80vh", bottom:"8vh"}}>Addressing climate change is a responsibility we all share. It's mainly caused by human actions like burning fossil fuels and cutting down trees, which release greenhouse gases. So, each of us can help by making greener choices - like saving energy, cutting waste, and backing eco-friendly practices.
 
                     Our communities, governments, and businesses need to team up and create sustainable solutions. This includes going for cleaner energy, improving public transportation, and getting on board with green tech.
@@ -44,4 +44,4 @@ function OurResponsability(){
         </Parallax>
     )
 }
-export default OurResponsability;
+export default OurResponsibility;
