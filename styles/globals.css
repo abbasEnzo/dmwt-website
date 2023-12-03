@@ -162,6 +162,12 @@ h1{
     position: absolute;
     color: white;
 }
+h2{
+    font-size: 40px;
+    font-family: 'Lexend', sans-serif;
+    position: absolute;
+    color: white;
+}
 h3{
     font-family: 'Lexend', sans-serif;
     color: white;
@@ -275,6 +281,7 @@ h1{
     width: 5px;
     z-index: 2000;
     rotate: 90deg;
+
 }
 .ourVisionBox{
     top:35vh;
