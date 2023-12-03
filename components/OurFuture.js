@@ -64,7 +64,7 @@ export default function Home() {
                 <Column images={[images[0], images[1], images[2]]} y={y}/>
                 <Column images={[images[3], images[4], images[5]]} y={y2}/>
                 <Column images={[images[6], images[7], images[8]]} y={y3}/>
-                <Column images={[images[9], images[10], images[11]]} y={y4}/>
+                {/*<Column images={[images[9], images[10], images[11]]} y={y4}/>*/}
             </div>
             </div>
             {/*<div className={styles.spacer}></div>*/}

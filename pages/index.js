@@ -4,6 +4,7 @@ import SurveyPage from "../components/SurveyPage";
 import LandingPage from "../components/LandingPage";
 import AgendaBox from "../components/AgendaBox";
 import QuizPage from "../components/QuizPage";
+import OurVision from "../components/OurVision";
 
 
 
@@ -33,6 +34,7 @@ function Home() {
             <OurResponsibility></OurResponsibility>
             <QuizPage></QuizPage>
             <SurveyPage></SurveyPage>
+            <OurVision></OurVision>
         </div>
     );
 }

@@ -10,7 +10,8 @@ const AgendaBox= () => (
         <motion.button whileHover={{color: "rgb(91, 195, 126)"}} className={"agendaBarButtons"} onClick={() => scrollToSection('section3')}>Our Responsibility</motion.button>
         <motion.button whileHover={{color: "rgb(91, 195, 126)"}} className={"agendaBarButtons"} onClick={() => scrollToSection('section4')}>Quiz</motion.button>
         <motion.button whileHover={{color: "rgb(91, 195, 126)"}} className={"agendaBarButtons"} onClick={() => scrollToSection('section5')}>What you can do</motion.button>
-        <motion.button whileHover={{color: "rgb(91, 195, 126)"}} className={"agendaBarButtons"} id={"lastAgendaButton"} onClick={() => scrollToSection('section5')}>Our Vision</motion.button>
+        <motion.button whileHover={{color: "rgb(91, 195, 126)"}} className={"agendaBarButtons"} onClick={() => scrollToSection('section6')}>Your Result</motion.button>
+        <motion.button whileHover={{color: "rgb(91, 195, 126)"}} className={"agendaBarButtons"} id={"lastAgendaButton"} onClick={() => scrollToSection('section7')}>Our Vision</motion.button>
     </div>
 
 )

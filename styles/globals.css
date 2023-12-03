@@ -63,7 +63,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    top: 200vh;
+    z-index: 1000;
 }
 .surveyContainer{
     background-color: #2d2d2d;
@@ -227,7 +227,7 @@ h1{
 .QuestionBox{
     display: block;
     align-items: center;
-/*    background-color: #0070f3;*/
+    /*    background-color: #0070f3;*/
     width: 100vh;
     height: 40vh;
     z-index: 2000;
@@ -263,7 +263,7 @@ h1{
     position: relative;
     bottom: 2vh;
     left: 25vh;
-/*    background-color: #5bc37e;*/
+    /*    background-color: #5bc37e;*/
     width: 40vh;
     height: 10vh;
 }
@@ -275,4 +275,65 @@ h1{
     width: 5px;
     z-index: 2000;
     rotate: 90deg;
+}
+.ourVisionBox{
+    top:35vh;
+    display: block;
+    align-items: center;
+    background-color: #2d2d2d;
+    width: 100vh;
+    height: 35vh;
+    z-index: 2000;
+    position: absolute;
+    text-align: justify;
+    border-radius: 10px;
+}
+.surveyPageBox{
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    top: 200vh;
+    background-color: #2d2d2d;
+}
+.SurveyResultBox{
+    display: grid;
+    align-items: center;
+    position: absolute;
+    bottom: 24vh;
+    width: 100%;
+    height: 10vh;
+    grid-template-columns: repeat(4, 1fr);
+}
+.SurveyResultStripes{
+    position: relative;
+    height: 100%;
+}
+#SurveyResultStripesRed{
+    background-color: #E86C68;
+}
+#SurveyResultStripesOrange{
+    background-color: #EA9958;
+}
+#SurveyResultStripesYellow{
+    background-color: #EBCE59;
+}
+#SurveyResultStripesGreen{
+    background-color: #5BC37E;
+}
+.SurveyLine {
+    position: absolute;
+    top: 4.7vh;
+    left: 13vh;
+    width: 85%;
+    height: 7px; /* Höhe der Linie anpassen, wie gewünscht */
+    background-color: white; /* Farbe der Linie anpassen, wie gewünscht */
+}
+.SurveyCircle{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 15vh;
+    border-radius: 100px;
+    background-color: white;
 }
