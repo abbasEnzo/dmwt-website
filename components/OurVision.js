@@ -23,7 +23,7 @@ function OurResponsibility(){
                         <p style={{width: "80vh", left: "9.5vh", top: "2vh"}}>Envision a world where prosperity and environmental preservation coexist. Renewable energy, such as solar and wind power, minimizes our carbon footprint. Smart, green cities prioritize public transportation and sustainable architecture, fostering a high quality of life. Innovative recycling and circular economy practices reduce waste, eliminating single-use plastics. Education empowers individuals for sustainable living, while global cooperation addresses environmental challenges. This vision is a call to action, urging us to prioritize renewable energy and sustainable practices for a world where a high standard of living thrives alongside a protected environment. Together, we can make this vision a reality.
                         </p>
                     </div>
-                    <Spline scene="https://prod.spline.design/PljD8wFf41uK6zPj/scene.splinecode" />
+                    <Spline scene="https://prod.spline.design/f7J4904xE0FbT9p9/scene.splinecode" />
                 </div>
             </div>
         </Parallax>
