@@ -12,6 +12,7 @@ const SurveyPage = () => {
     const tvToChange = useRef();
     const laptopToChange = useRef();
     const handyToChange = useRef();
+    const socialMediaToChange = useRef();
 
     function onLoad(spline) {
         const computer = spline.findObjectByName('Computer');
@@ -20,18 +21,21 @@ const SurveyPage = () => {
         const tv = spline.findObjectByName('TV');
         const laptop = spline.findObjectByName('Laptop');
         const handy = spline.findObjectByName('Handy');
+        const socialmedia = spline.findObjectByName('SocialMedia');
         computer.visible = false;
         controller.visible = false;
         printer.visible = false;
         tv.visible = false;
         laptop.visible = false;
         handy.visible = false;
+        socialmedia.visible = false;
         computerToChange.current = computer;
         controllerToChange.current = controller;
         printerToChange.current = printer;
         tvToChange.current = tv;
         laptopToChange.current = laptop;
         handyToChange.current = handy;
+        socialMediaToChange.current = socialmedia;
     }
 
     const [computerVisible, setComputerVisible] = useState(false);
@@ -40,6 +44,7 @@ const SurveyPage = () => {
     const [tvVisible, setTvVisible] = useState(false);
     const [laptopVisible, setLaptopVisible] = useState(false);
     const [handyVisible, setHandyVisible] = useState(false);
+    const [socialMediaVisible, setSocialMediaVisible] = useState(false);
 
     function toggleComputer() {
         if (computerVisible) {
@@ -100,6 +105,15 @@ const SurveyPage = () => {
             setHandyVisible(true);
         }
     }
+    function toggleSocialMedia() {
+        if (socialMediaVisible) {
+            socialMediaToChange.current.visible = false;
+            setSocialMediaVisible(false);
+        } else {
+            socialMediaToChange.current.visible = true;
+            setSocialMediaVisible(true);
+        }
+    }
 
     return (
         <div className={'surveyPageBox'}>
@@ -117,7 +131,7 @@ const SurveyPage = () => {
                                 backgroundColor: "black"
                             }}>Loading...</div>}>
                                 <Spline className="SurveyRoom"
-                                        scene="https://prod.spline.design/PljD8wFf41uK6zPj/scene.splinecode"
+                                        scene="https://prod.spline.design/f7J4904xE0FbT9p9/scene.splinecode"
                                         onLoad={onLoad}/>
                             </Suspense>
                             <div className="SurveyButtonBox">
@@ -130,11 +144,11 @@ const SurveyPage = () => {
                                 <motion.div
                                     style={{backgroundColor: controllerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                     className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                    onClick={toggleController}>Controller
+                                    onClick={toggleController}>Spielekonsole
                                 </motion.div>
                                 <motion.div style={{backgroundColor: printerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                            onClick={togglePrinter}>printer
+                                            onClick={togglePrinter}>Drucker
                                 </motion.div>
                                 <motion.div style={{backgroundColor: tvVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
@@ -147,6 +161,10 @@ const SurveyPage = () => {
                                 <motion.div style={{backgroundColor: handyVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
                                             onClick={toggleHandy}>Handy
+                                </motion.div>
+                                <motion.div style={{backgroundColor: socialMediaVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                            className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
+                                            onClick={toggleSocialMedia}>Social-Media
                                 </motion.div>
                             </div>
                         </div>
@@ -167,7 +185,6 @@ const SurveyPage = () => {
                 </div>
             </div>
         </div>
-    )
+)
 }
 export default SurveyPage;
-
