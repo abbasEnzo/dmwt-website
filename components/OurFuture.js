@@ -6,18 +6,18 @@ import Lenis from '@studio-freight/lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
 
 const images = [
-    "/Abholzung.jpg",
-    "/Waldbrand2.jpg",
-    "/Waldbrand.jpg",
-    "/Eisberg.jpg",
-    "/Eisbär.jpg",
-    "/Flut.jpg",
-    "/Dürre.jpg",
-    "/OurFutureText.png",
-    "/SchmelzenDesPolareises.jpg",
-    "/Smog.jpg",
-    "/Tornado.jpg",
-    "/Müllberg.jpg",
+    "/Abholzung.webp",
+    "/Waldbrand.webp",
+    "/Katastrophe.webp",
+    "/Eisberg.webp",
+    "/Eisbär.webp",
+    "/Flut.webp",
+    "/Dürre.webp",
+    "/OurFutureText.webp",
+    "/SchmelzenDesPolareises.webp",
+    "/Smog.webp",
+    "/Tornado.webp",
+    "/Müllberg.webp",
 ]
 
 export default function Home() {

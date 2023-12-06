@@ -7,7 +7,7 @@ import React, {useState} from "react";
 function OurResponsibility(){
 
     return(
-        <Parallax className={'image'} bgImage={'/test.png'} strength={600} style={{ zIndex: 1000}}>
+        <Parallax className={'image'} bgImage={'/test.webp'} strength={600} style={{ zIndex: 1000}}>
             <div id="section3" style={{zIndex:1000}}>
             <div className={'container hidden'} style={{ zIndex: 1000}}>
                 <h1 style={{
