@@ -110,6 +110,7 @@ const SurveyPage = () => {
                             bottom: "34vh"
                         }}>Your personal Responsibility</h1>
                         <div className={"surveyContainer"}>
+
                             <Suspense fallback={<div style={{
                                 width: "100%",
                                 height: "100vh",
@@ -117,7 +118,7 @@ const SurveyPage = () => {
                                 backgroundColor: "black"
                             }}>Loading...</div>}>
                                 <Spline className="SurveyRoom"
-                                        scene="https://prod.spline.design/PljD8wFf41uK6zPj/scene.splinecode"
+                                        scene="https://prod.spline.design/f7J4904xE0FbT9p9/scene.splinecode"
                                         onLoad={onLoad}/>
                             </Suspense>
                             <div className="SurveyButtonBox">

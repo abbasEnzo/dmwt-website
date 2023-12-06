@@ -164,6 +164,7 @@ h1{
     width: 100%;
     background-color: #2d2d2d;
     position: fixed;
+    top: 0vh;
     align-items: center;
     justify-items: center;
 }
@@ -173,11 +174,11 @@ h1{
     position: relative;
     font-family: Lexend,sans-serif;
     background-color: transparent;
-    border-right: solid;
+    border-right: none;
     border-left: none;
     border-top: none;
     border-bottom: none;
-    border-color: white;
+    /*border-color: white;*/
     color: white;
     font-size: 25px;
     font-weight: bold;
@@ -324,9 +325,16 @@ h1{
 }
 .SurveyRoom{
     position: relative;
-    right: 40vh;
-    bottom: 12vh;
+    right: 55vh;
+    bottom: 20vh;
     scale: 0.9;
+}
+.hoverBlocker{
+    position: absolute;
+    right: 55vh;
+    bottom: 15vh;
+    background-color: #0070f3;
+    z-index: 1000;
 }
 .surveyImage{
     position: absolute;
@@ -365,4 +373,15 @@ h1{
     height: 100%; /* Occupy full height of the row */
     box-sizing: border-box; /* Include padding in width and height calculations */
     border-radius: 10px; /* Adjusted border radius for better appearance */
+}
+.LoadingScreen{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    background-color: #2d2d2d;
+}
+.LoadingScreenHidden{
+    z-index: -1000;
+    opacity: 0;
 }
