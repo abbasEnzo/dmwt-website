@@ -11,7 +11,7 @@ import Spline from '@splinetool/react-spline';
 function OurResponsibility(){
 
     return(
-        <Parallax className={'image'} bgImage={'/OurVision.png'} strength={600} style={{ zIndex: 1000}}>
+        <Parallax className={'image'} bgImage={'/OurVision.webp'} strength={600} style={{ zIndex: 1000}}>
             <div id="section7" style={{zIndex:1000}}>
                 <div className={'container hidden'} style={{ zIndex: 1000}}>
                     <h1 style={{

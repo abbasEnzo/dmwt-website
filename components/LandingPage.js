@@ -27,7 +27,7 @@ export default function LandingPage() {
                     zIndex: 1
                 }}
             >
-                <img style={{ filter: "blur(1px)", width: "100%" }} src="/LandingPageForeground.png" alt="foreground" />
+                <img style={{ filter: "blur(1px)", width: "100%" }} src="/LandingPageForeground.webp" alt="foreground" />
             </Plx>
             <Plx
                 parallaxData={[
@@ -50,7 +50,7 @@ export default function LandingPage() {
                     width: "100%"
                 }}
             >
-                <img style={{ width: "100%" }} src="/LandingPageBackground.jpg" alt="background" />
+                <img style={{ width: "100%" }} src="/LandingPageBackground.webp" alt="background" />
             </Plx>
             <Plx
                 parallaxData={[
