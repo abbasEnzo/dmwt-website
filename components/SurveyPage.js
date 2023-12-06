@@ -124,6 +124,7 @@ const SurveyPage = () => {
                             bottom: "34vh"
                         }}>Your personal Responsibility</h1>
                         <div className={"surveyContainer"}>
+
                             <Suspense fallback={<div style={{
                                 width: "100%",
                                 height: "100vh",

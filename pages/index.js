@@ -5,6 +5,7 @@ import LandingPage from "../components/LandingPage";
 import AgendaBox from "../components/AgendaBox";
 import QuizPage from "../components/QuizPage";
 import OurVision from "../components/OurVision";
+import LoadingScreen from "../components/LoadingScreen";
 
 
 function Home() {
@@ -18,7 +19,7 @@ function Home() {
                         behavior: 'smooth', // 'auto' for instant scrolling, 'smooth' for smooth scrolling
                     });
                 }
-            }, 1000);
+            }, 17000);
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -39,6 +40,7 @@ function Home() {
     return (
         <div>
             <AgendaBox></AgendaBox>
+            <LoadingScreen></LoadingScreen>
             <LandingPage></LandingPage>
             <OurResponsibility></OurResponsibility>
             <QuizPage></QuizPage>

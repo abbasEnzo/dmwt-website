@@ -13,24 +13,6 @@
         height: 150vh;
     }
 }
-.line{
-    border-width: thin;
-    border-radius: 2px;
-    border-color: white;
-    color: transparent;
-    transform: rotate(180deg);
-    position: relative;
-}
-#lineOurFuture{
-    top: 3vh;
-    left: 100vh;
-    width: 35vh;
-}
-#lineOurResponsability{
-    top: 80vh;
-    left: 58.5vh;
-    width: 72vh;
-}
 .container{
     display: grid;
     align-items: center;
@@ -44,22 +26,6 @@
     height: 100vh;
     top: 200vh;
 }
-.container span.img-text{
-    border-radius: 10px;
-    background-color: #2d2d2d;
-    text-transform: uppercase;
-    color: #eaeaea;
-    padding: 1rem;
-    font-size: 1.5rem;
-    letter-spacing: 10px;
-}
-
-.text-box{
-    text-align: center;
-    padding: 3rem 1rem;
-    text-align: justify;
-}
-
 .progress-bar {
     position: fixed;
     left: 0;
@@ -68,63 +34,6 @@
     width: 100%;
     background-color: #5bc37e;
     z-index: 9999;
-}
-#boxShadowOne{
-    background-color: #333333;
-    width: 60vh;
-    border-radius: 20px;
-    position: absolute;
-    right: 110vh;
-    height: 45vh;
-}
-#textBoxOne{
-    background-color: #949494;
-    width: 60vh;
-    border-radius: 20px;
-    position: absolute;
-    left: 2.5vh;
-    bottom: 2.5vh;
-}
-
-#boxShadowTwo{
-    background-color: #333333;
-    width: 60vh;
-    border-radius: 20px;
-    position: absolute;
-    left: 130vh;
-    height: 45vh;
-}
-#textBoxTwo{
-    background-color: #949494;
-    width: 60vh;
-    border-radius: 20px;
-    position: absolute;
-    right: 2.5vh;
-    bottom: 2.5vh;
-}
-
-#boxShadowThree{
-    background-color: #333333;
-    width: 60vh;
-    border-radius: 20px;
-    position: absolute;
-    left: 35vh;
-    height: 45vh;
-}
-#textBoxThree{
-    background-color: #949494;
-    width: 60vh;
-    border-radius: 20px;
-    position: absolute;
-    left: 2.5vh;
-    bottom: 2.5vh;
-}
-#containerImageTwo{
-    text-align-all: center;
-    width: 80vh;
-    height: 10vh;
-    left: 20vh;
-    top:14vh;
 }
 p{
     position: relative;
@@ -164,6 +73,7 @@ h1{
     width: 100%;
     background-color: #2d2d2d;
     position: fixed;
+    top: 0vh;
     align-items: center;
     justify-items: center;
 }
@@ -173,11 +83,11 @@ h1{
     position: relative;
     font-family: Lexend,sans-serif;
     background-color: transparent;
-    border-right: solid;
+    border-right: none;
     border-left: none;
     border-top: none;
     border-bottom: none;
-    border-color: white;
+    /*border-color: white;*/
     color: white;
     font-size: 25px;
     font-weight: bold;
@@ -193,7 +103,6 @@ h1{
     transform: translateX(-100%);
     transition: all 1s;
 }
-
 .show{
     opacity: 1;
     filter: blur(0);
@@ -324,9 +233,16 @@ h1{
 }
 .SurveyRoom{
     position: relative;
-    right: 40vh;
-    bottom: 12vh;
+    right: 55vh;
+    bottom: 20vh;
     scale: 0.9;
+}
+.hoverBlocker{
+    position: absolute;
+    right: 55vh;
+    bottom: 15vh;
+    background-color: #0070f3;
+    z-index: 1000;
 }
 .surveyImage{
     position: absolute;
@@ -365,4 +281,16 @@ h1{
     height: 100%; /* Occupy full height of the row */
     box-sizing: border-box; /* Include padding in width and height calculations */
     border-radius: 10px; /* Adjusted border radius for better appearance */
+}
+.LoadingScreen{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9998;
+    background-color: #2d2d2d;
+}
+.LoadingScreenHidden{
+    z-index: -1000;
+    opacity: 0;
+    width: 0%;
 }
