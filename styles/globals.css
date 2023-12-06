@@ -235,7 +235,7 @@ h1{
     position: relative;
     right: 55vh;
     bottom: 20vh;
-    scale: 0.9;
+    scale: 0.5;
 }
 .hoverBlocker{
     position: absolute;
