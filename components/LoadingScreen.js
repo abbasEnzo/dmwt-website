@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {PulseLoader} from "react-spinners";
-import {white} from "next/dist/lib/picocolors";
+import {PropagateLoader} from "react-spinners";
+
 
 function LoadingScreen() {
     const [isVisible, setIsVisible] = useState(true);
@@ -17,8 +17,8 @@ function LoadingScreen() {
 
     return (
         <div className={isVisible ? 'LoadingScreen' : 'LoadingScreenHidden'}>
-            <h1 style={{top:"25vh"}}>Your page is loading</h1>
-            <PulseLoader color={"white"} style={{position: "absolute", top:"50vh"}}></PulseLoader>
+            <img src={"LoadingScreen.png"} alt={"/LoadingScreen"} style={{ width: "100%", maxWidth: "100%" }} />
+            <PropagateLoader color={"white"} style={{position: "absolute", top:"52vh", left: "107vh", zIndex: "9999"}}></PropagateLoader>
         </div>
     );
 }
