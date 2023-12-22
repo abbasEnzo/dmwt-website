@@ -119,7 +119,7 @@ const SurveyPage = () => {
         <div className={'surveyPageBox'}>
             <div id="section5" style={{}}>
                 <Parallax className={'surveyImage'} bgImage={'/stage3.webp'} strength={600} blur={4}>
-                    <div className={'container hidden'}>
+                    <div className={'container'}>
                         <h1 style={{
                             bottom: "34vh"
                         }}>Your personal Responsibility</h1>

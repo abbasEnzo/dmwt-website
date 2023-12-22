@@ -9,7 +9,7 @@ function OurResponsibility(){
     return(
         <Parallax className={'image'} bgImage={'/test.webp'} strength={600} style={{ zIndex: 1000}}>
             <div id="section3" style={{zIndex:1000}}>
-            <div className={'container hidden'} style={{ zIndex: 1000}}>
+            <div className={'container'} style={{ zIndex: 1000}}>
                 <h1 style={{
                     top: "8vh",
                     whiteSpace: "nowrap",

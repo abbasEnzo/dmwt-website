@@ -1,4 +1,4 @@
-'use client';
+    'use client';
 import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/ourFuture.module.scss'
 import Image from 'next/image';
