@@ -6,6 +6,7 @@ import AgendaBox from "../components/AgendaBox";
 import QuizPage from "../components/QuizPage";
 import OurVision from "../components/OurVision";
 import LoadingScreen from "../components/LoadingScreen";
+import Footer from "../components/Footer"
 
 
 function Home() {
@@ -46,6 +47,7 @@ function Home() {
             <QuizPage></QuizPage>
             <SurveyPage></SurveyPage>
             <OurVision></OurVision>
+            <Footer></Footer>
         </div>
     );
 }

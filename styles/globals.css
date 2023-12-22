@@ -21,6 +21,12 @@
     height: 100vh;
     width: 100%;
 }
+.footersection{
+    position: relative;
+    height: 100vh;
+    top: 200vh;
+    background-color: #302c2c;
+}
 .image{
     position: relative;
     height: 100vh;
@@ -68,6 +74,11 @@ h1{
     position: relative;
     font-size: 80px;
 }
+h4{
+    font-size: 100px;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+}
 .agendaBar {
     z-index: 1001;
     height: 8vh;
@@ -93,6 +104,56 @@ h1{
     font-size: 25px;
     font-weight: bold;
     margin: 15px;
+}
+.navigationButtons{
+    font-family: Lexend,sans-serif;
+    background-color: transparent;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    color: white;
+    font-size: 50px;
+    display: flow;
+    margin-left: 5.1%;
+    margin-bottom: 20px;
+    transform: translate(0px,270px);
+    font-weight: normal;
+}
+#emailInput{
+    background-color: white;
+    transform: translate(535px,-230px);
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#emailInputButton{
+    font-family: Lexend,sans-serif;
+    border-color: #0f5f27;
+    color: white;
+    font-size: 25px;
+    display: flow;
+    margin-left: 5.1%;
+    margin-bottom: 20px;
+    transform: translate(1610px,-285px);
+    background-color: #0f5f27;
+    height: 55px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: bold;
+}
+.socials{
+    height: 50px;
+    margin-right: 20px;
+    width: 50px;
+    transform: translate(450px,-40px);
+}
+#socialstext{
+    font-size: 30px;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+    transform: translate(480px,-40px);
 }
 #lastAgendaButton{
     border-color: transparent;
