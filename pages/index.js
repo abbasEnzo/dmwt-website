@@ -17,7 +17,7 @@ function Home() {
                 if (ourVisionElement) {
                     window.scrollTo({
                         top: 700,
-                        behavior: 'smooth', // 'auto' for instant scrolling, 'smooth' for smooth scrolling
+                        behavior: 'smooth'
                     });
                 }
             }, 17000);
@@ -40,6 +40,7 @@ function Home() {
 
     return (
         <div>
+
             <AgendaBox></AgendaBox>
             <LoadingScreen></LoadingScreen>
             <LandingPage></LandingPage>
@@ -47,6 +48,7 @@ function Home() {
             <QuizPage></QuizPage>
             <SurveyPage></SurveyPage>
             <OurVision></OurVision>
+
             <Footer></Footer>
         </div>
     );
