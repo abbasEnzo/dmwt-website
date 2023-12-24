@@ -332,13 +332,13 @@ h4{
 .SurveyButtonBox {
     width: 80vh;
     height: 45vh;
-    bottom: 7vh;
+    bottom: 10vh;
     left: 91vh;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
 }
 .surveyButton {
     display: flex;
@@ -346,10 +346,14 @@ h4{
     justify-content: center; /* Center the content horizontally */
     padding: 1rem; /* Adjusted padding for better appearance */
     background-color: #D9D9D9;
+    background-size: 100% 100%;
+    background-position: center;
     width: 100%; /* Occupy full width of the column */
     height: 100%; /* Occupy full height of the row */
     box-sizing: border-box; /* Include padding in width and height calculations */
     border-radius: 10px; /* Adjusted border radius for better appearance */
+    width: 120px;
+    height: 100px;
 }
 .LoadingScreen{
     height: 100vh;
