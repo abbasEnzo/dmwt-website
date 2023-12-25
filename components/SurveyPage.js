@@ -187,7 +187,7 @@ const SurveyPage = () => {
                                             position: 'absolute',
                                             left: '63vh',
                                             top: '18vh',
-                                            backgroundImage: `url('/SmartphoneIcon.webp')`,
+                                            backgroundImage: `url('/HandyIcon.webp')`,
                                             backgroundColor: handyVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
                                             onClick={toggleHandy}>
