@@ -2,6 +2,7 @@ import {Parallax} from 'react-parallax';
 import React, {Suspense, useRef, useState} from 'react';
 import {motion} from "framer-motion"
 
+
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const SurveyPage = () => {
@@ -138,34 +139,43 @@ const SurveyPage = () => {
                             <div className="SurveyButtonBox">
                                 <h3 style={{position: "absolute", bottom: "47vh", left: "9vh"}}>What devices are you
                                     using?</h3>
-                                <motion.div style={{backgroundColor: computerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                <motion.div
+                                            style={{
+                                                backgroundImage: `url('/ComputerIcon.webp')`,
+                                                backgroundColor: computerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                            onClick={toggleComputer}>Computer
+                                            onClick={toggleComputer}>
                                 </motion.div>
                                 <motion.div
-                                    style={{backgroundColor: controllerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                    style={{backgroundImage: `url('/ControllerIcon.webp')`,
+                                        backgroundColor: controllerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                     className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                    onClick={toggleController}>Spielekonsole
+                                    onClick={toggleController}>
                                 </motion.div>
-                                <motion.div style={{backgroundColor: printerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                <motion.div style={{backgroundImage: `url('/DruckerIcon.webp')`,
+                                            backgroundColor: printerVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                            onClick={togglePrinter}>Drucker
+                                            onClick={togglePrinter}>
                                 </motion.div>
-                                <motion.div style={{backgroundColor: tvVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                <motion.div style={{backgroundImage: `url('/TV_Icon.webp')`,
+                                            backgroundColor: tvVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                            onClick={toggleTV}>TV
+                                            onClick={toggleTV}>
                                 </motion.div>
-                                <motion.div style={{backgroundColor: laptopVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                <motion.div style={{backgroundImage: `url('/LaptopIcon.webp')`,
+                                            backgroundColor: laptopVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                            onClick={toggleLaptop}>Laptop
+                                            onClick={toggleLaptop}>
                                 </motion.div>
-                                <motion.div style={{backgroundColor: handyVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                <motion.div style={{backgroundImage: `url('/SmartphoneIcon.webp')`,
+                                            backgroundColor: handyVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                            onClick={toggleHandy}>Handy
+                                            onClick={toggleHandy}>
                                 </motion.div>
-                                <motion.div style={{backgroundColor: socialMediaVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
+                                <motion.div style={{backgroundImage: `url('/SocialsIcon.webp')`,
+                                            backgroundColor: socialMediaVisible ? 'rgb(91, 195, 126)' : '#D9D9D9'}}
                                             className="surveyButton" whileHover={{scale: 1.05}} whileTap={{scale: 0.9}}
-                                            onClick={toggleSocialMedia}>Social-Media
+                                            onClick={toggleSocialMedia}>
                                 </motion.div>
                             </div>
                         </div>
