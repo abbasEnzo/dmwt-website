@@ -3,10 +3,13 @@ import React, {Suspense, useRef, useState} from 'react';
 import {motion} from "framer-motion"
 import useSWR from 'swr';
 
-const fetcher = url => fetch(url).then(res => res.json())
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
+
 const SurveyPage = () => {
+
+    const fetcher = url => fetch(url).then(res => res.json())
+    const surveyCircleRef = useRef(null);
 
     const computerToChange = useRef();
     const controllerToChange = useRef();
@@ -48,7 +51,19 @@ const SurveyPage = () => {
     const [handyVisible, setHandyVisible] = useState(false);
     const [socialMediaVisible, setSocialMediaVisible] = useState(false);
 
-    const carbValue = 3;
+    const elements = [
+        { name: 'Computer', visible: computerVisible, value: 600},//Angaben in Kilogramm(kg)
+        { name: 'Controller', visible: controllerVisible, value: 150},
+        { name: 'Printer', visible: printerVisible, value: 50},
+        { name: 'TV', visible: tvVisible, value: 300},
+        { name: 'Laptop', visible: laptopVisible, value: 150},
+        { name: 'Handy', visible: handyVisible, value: 80},
+        { name: 'SocialMedia', visible: socialMediaVisible, value: 30},
+
+    ];
+
+    const carbValue = elements.reduce((acc, { visible, value }) => acc + (visible ? value : 0), 0);
+
     const {
         data: emissionData,
         isLoading,
@@ -56,15 +71,7 @@ const SurveyPage = () => {
     } = useSWR('/api/getAverage', fetcher, {
         revalidateOnFocus: false,
         revalidateOnReconnect: false
-    })
-
-    if (error) {
-        return <p>Failed to fetch</p>
-    }
-
-    if (isLoading) {
-        return <p>Loading Emissions....</p>
-    }
+    });
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -73,13 +80,19 @@ const SurveyPage = () => {
             carbonValue: carbValue,
         }
 
-        const response = await fetch('/api/updateDatabase', {
+        await fetch('/api/updateDatabase', {
             method: 'POST',
             body: JSON.stringify(newValue)
         })
 
-        const data = await response.json()
-        console.log(JSON.stringify(data))
+
+        const tableAverage = emissionData?.averageValue;
+        const resultingData = (tableAverage/1360)*100;
+
+        const surveyCircle = surveyCircleRef.current;
+        surveyCircle.style.left = `55%`;
+        surveyCircle.style.transition = 'left 1s ease-in-out';
+
     }
 
     function toggleComputer() {
@@ -251,8 +264,36 @@ const SurveyPage = () => {
                     <div className={"SurveyResultStripes"} id={"SurveyResultStripesYellow"}></div>
                     <div className={"SurveyResultStripes"} id={"SurveyResultStripesGreen"}></div>
                     <div className="SurveyLine"></div>
-                    <div className="SurveyCircle"></div>
+                    <div ref={surveyCircleRef}
+                         className="SurveyCircle"
+                         style={{ left: '5%' }}
+
+                    ></div>
                 </div>
+                <motion.div
+                    className="submitButton"
+                    style ={{
+                        height: '10vh',
+                        width: '50vh',
+                        position: 'absolute',
+                        left: '85vh',
+                        top: '55vh',
+                        borderRadius: '50px',
+                        backgroundColor: 'gray',
+                        textAlign: 'center',
+                        fontSize: '24px',
+                        fontFamily: 'Comfortaa, sans-serif',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+                    whileHover={{ scale : 1.05, backgroundColor: 'rgb(91, 195, 126)' }}
+                    whileTap={{ scale: 0.95, backgroundColor: '#D9D9D9' }}
+                    onClick={handleSubmit}
+
+
+                >Submit your Answers
+                </motion.div>
             </div>
         </div>
 )
