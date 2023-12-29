@@ -1,8 +1,9 @@
 import {Parallax} from 'react-parallax';
 import React, {Suspense, useRef, useState} from 'react';
 import {motion} from "framer-motion"
+import useSWR from 'swr';
 
-
+const fetcher = url => fetch(url).then(res => res.json())
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const SurveyPage = () => {
@@ -46,6 +47,40 @@ const SurveyPage = () => {
     const [laptopVisible, setLaptopVisible] = useState(false);
     const [handyVisible, setHandyVisible] = useState(false);
     const [socialMediaVisible, setSocialMediaVisible] = useState(false);
+
+    const carbValue = 3;
+    const {
+        data: emissionData,
+        isLoading,
+        isError: error
+    } = useSWR('/api/getAverage', fetcher, {
+        revalidateOnFocus: false,
+        revalidateOnReconnect: false
+    })
+
+    if (error) {
+        return <p>Failed to fetch</p>
+    }
+
+    if (isLoading) {
+        return <p>Loading Emissions....</p>
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        const newValue = {
+            carbonValue: carbValue,
+        }
+
+        const response = await fetch('/api/updateDatabase', {
+            method: 'POST',
+            body: JSON.stringify(newValue)
+        })
+
+        const data = await response.json()
+        console.log(JSON.stringify(data))
+    }
 
     function toggleComputer() {
         if (computerVisible) {
