@@ -15,15 +15,15 @@ function Footer() {
                 position:"absolute",
                 left:"32vh",
                 whiteSpace: "nowrap",
-                top:"-1.5vh",
+                top:"1.5vh",
             }}>Newsletter</h3>
             <input type="text" id="emailInput" name="email" required minLength="4" maxLength="50" size="10" placeholder={"Enter your E-Mail Address"}/>
             <motion.button style={{}} whileHover={{color: "rgb(91, 195, 126)"}}  id={"emailInputButton"}>Subscribe</motion.button>
             <h3 style={{
                 position:"absolute",
-                right:"37vh",
+                right:"40vh",
                 whiteSpace: "nowrap",
-                top:"-1.5vh",
+                top:"0vh",
             }}>Our Socials</h3>
             <img className="socials" src="https://freelogopng.com/images/all_img/1690643777twitter-x%20logo-png-white.png" alt="Twitter" />
             <img className="socials" src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-white-glyph.png" alt="Instagram" />

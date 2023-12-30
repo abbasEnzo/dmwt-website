@@ -85,14 +85,34 @@ const SurveyPage = () => {
             body: JSON.stringify(newValue)
         })
 
-
+        const section = document.getElementById("section6");
+        section.scrollIntoView({ behavior: 'smooth' });
         const tableAverage = emissionData?.averageValue;
         const resultingData = (tableAverage/1360)*100;
 
         const surveyCircle = surveyCircleRef.current;
-        surveyCircle.style.left = `55%`;
-        surveyCircle.style.transition = 'left 1s ease-in-out';
 
+        let resultText = document.getElementById("SurveyResultText");
+        if(carbValue <= 160){
+            surveyCircle.style.left = `5%`;
+            surveyCircle.style.transition = 'left 1s ease-in-out';
+            resultText.innerText = "Dein Ergebnis ist sehr gut";
+        }
+        else if(carbValue <= 460){
+            surveyCircle.style.left = `25%`;
+            surveyCircle.style.transition = 'left 1s ease-in-out';
+            resultText.innerText = "Dein Ergebnis ist gut";
+        }
+        else if(carbValue <= 900){
+            surveyCircle.style.left = `55%`;
+            surveyCircle.style.transition = 'left 1s ease-in-out';
+            resultText.innerText = "Dein Ergebnis ist schlecht";
+        }
+        else {
+            surveyCircle.style.left = `90%`;
+            surveyCircle.style.transition = 'left 1s ease-in-out';
+            resultText.innerText = "Dein Ergebnis ist sehr schlecht";
+        }
     }
 
     function toggleComputer() {
@@ -259,25 +279,25 @@ const SurveyPage = () => {
                     top: "7vh",
                 }}>Your Result</h1>
                 <div className="SurveyResultBox">
-                    <div className={"SurveyResultStripes"} id={"SurveyResultStripesRed"}></div>
-                    <div className={"SurveyResultStripes"} id={"SurveyResultStripesOrange"}></div>
-                    <div className={"SurveyResultStripes"} id={"SurveyResultStripesYellow"}></div>
                     <div className={"SurveyResultStripes"} id={"SurveyResultStripesGreen"}></div>
+                    <div className={"SurveyResultStripes"} id={"SurveyResultStripesYellow"}></div>
+                    <div className={"SurveyResultStripes"} id={"SurveyResultStripesOrange"}></div>
+                    <div className={"SurveyResultStripes"} id={"SurveyResultStripesRed"}></div>
                     <div className="SurveyLine"></div>
                     <div ref={surveyCircleRef}
                          className="SurveyCircle"
                          style={{ left: '5%' }}
-
                     ></div>
                 </div>
+                <p id={"SurveyResultText"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste labore laboriosam nam suscipit tenetur. Adipisci aut debitis velit voluptate. Beatae deleniti dicta et explicabo, ipsa ipsam iure voluptatum. Aspernatur dignissimos dolorum excepturi expedita ipsa libero optio rerum, ut. Animi assumenda enim esse facere facilis harum ipsum iure, magnam molestiae mollitia possimus repudiandae? Accusantium assumenda deleniti, deserunt dolore eos expedita ipsa, magni mollitia neque, nulla perferendis quam quisquam sapiente unde veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis consequatur culpa cum, cupiditate delectus distinctio doloremque dolorum enim eos et excepturi exercitationem iusto molestiae nesciunt nobis obcaecati officiis pariatur quam recusandae repellat sequi similique tenetur totam ut veritatis voluptate?</p>
                 <motion.div
                     className="submitButton"
                     style ={{
                         height: '10vh',
                         width: '50vh',
                         position: 'absolute',
-                        left: '85vh',
-                        top: '55vh',
+                        left: '130vh',
+                        top: '-15.8vh',
                         borderRadius: '50px',
                         backgroundColor: 'gray',
                         textAlign: 'center',

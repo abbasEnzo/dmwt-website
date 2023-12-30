@@ -130,8 +130,8 @@ h4{
     width: 15%;
     height: 50px;
     border-radius: 20px;
-    top: 11vh;
-    right: 53vh;
+    top: 13vh;
+    right: 57.5vh;
 }
 #emailInputButton{
     position: relative;
@@ -147,20 +147,20 @@ h4{
     height: 55px;
     border-radius: 20px;
     font-weight: bold;
-    top: 4.6vh;
-    left: 55vh;
+    top: 15vh;
+    left: 25vh;
 }
 .socials{
     height: 50px;
     margin-right: 20px;
     width: 50px;
-    transform: translate(450px,-40px);
+    transform: translate(480px,-20px);
 }
 #socialstext{
     font-size: 30px;
     font-family: 'Lexend', sans-serif;
     color: white;
-    transform: translate(480px,-40px);
+    transform: translate(480px,-30px);
 }
 #lastAgendaButton{
     border-color: transparent;
@@ -244,8 +244,8 @@ h4{
     display: block;
     align-items: center;
     background-color: #2d2d2d;
-    width: 100vh;
-    height: 42vh;
+    width: 90vh;
+    height: 35vh;
     z-index: 2000;
     position: absolute;
     text-align: justify;
@@ -283,6 +283,12 @@ h4{
 }
 #SurveyResultStripesGreen{
     background-color: #5BC37E;
+}
+#SurveyResultText{
+    position: absolute;
+    left: 50vh;
+    width: 100vh;
+    top: 55vh;
 }
 .SurveyLine {
     position: absolute;

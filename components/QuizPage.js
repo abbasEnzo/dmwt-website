@@ -5,13 +5,16 @@ import {motion} from "framer-motion";
 
 
 function QuizPage(){
-    const [QuestionTwoText, setQuestionTwoText] = useState('A PC with a screensaver going can use well over 100W of power, compared with about 80W in sleep mode.');
+    const [QuestionTwoText, setQuestionTwoText] = useState('');
 
     const handleQuestionTwoTextChange = () => {
         // Neuer Text, den du setzen möchtest
-        const neuerText = 'False, A PC with a screensaver going can use well over 100W of power, compared with only about 10W in sleep mode. That\'s why powering down PCs in your home or office makes more sense from both an environmental and cost-saving perspective.';
-
-        setQuestionTwoText(neuerText);
+        let resultText = document.getElementById("QuestionTwoText");
+        let questionTwoBox = document.getElementById("QuestionTwoButtonBox");
+        resultText.innerText = 'False, A PC with a screensaver going can use well over 100W of power, compared with only about 10W in sleep mode. That\'s why powering down PCs in your home or office makes more sense from both an environmental and cost-saving perspective.';
+        resultText.style.position = "absolute";
+        resultText.style.bottom = "5vh";
+        questionTwoBox.style.top = "35vh";
     };
     const [firstQuestionTrueClicked, setfirstQuestionTrueisClicked] = useState(false);
     const handleFirstQuestionTrueClicked = () => {
@@ -65,8 +68,8 @@ function QuizPage(){
                 </div>
             </div>
             <div className={"QuestionBox"} id={"QuestionBox2"}>
-                <h3>{QuestionTwoText}</h3>
-                <div className="QuizTrueFalseBox">
+                <h3 id={"QuestionTwoText"}>A PC with a screensaver going can use well over 100W of power, compared with about 80W in sleep mode.</h3>
+                <div className="QuizTrueFalseBox" id={"QuestionTwoButtonBox"}>
                     <motion.button
                         className={"QuizButtons"}
                         whileHover={{scale : 1.2}}

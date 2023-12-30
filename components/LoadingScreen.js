@@ -18,7 +18,7 @@ function LoadingScreen() {
     return (
         <div className={isVisible ? 'LoadingScreen' : 'LoadingScreenHidden'}>
             <img src={"LoadingScreen.webp"} alt={"/LoadingScreen"} style={{ width: "100%", maxWidth: "100%" }} />
-            <PropagateLoader color={"white"} style={{position: "absolute", top:"52vh", left: "107vh", zIndex: "9999"}}></PropagateLoader>
+            <PropagateLoader color={"white"} style={{position: "absolute", top:"52vh", left: "100vh", zIndex: "9999"}}></PropagateLoader>
         </div>
     );
 }
