@@ -20,7 +20,7 @@ function Home() {
                         behavior: 'smooth'
                     });
                 }
-            }, 17000);
+            }, 10000);
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
