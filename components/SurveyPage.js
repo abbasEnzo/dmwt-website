@@ -64,14 +64,14 @@ const SurveyPage = () => {
 
     const carbValue = elements.reduce((acc, { visible, value }) => acc + (visible ? value : 0), 0);
 
-    const {
+    /*const {
         data: emissionData,
         isLoading,
         isError: error
     } = useSWR('/api/getAverage', fetcher, {
         revalidateOnFocus: false,
         revalidateOnReconnect: false
-    });
+    });*/
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -87,31 +87,36 @@ const SurveyPage = () => {
 
         const section = document.getElementById("section6");
         section.scrollIntoView({ behavior: 'smooth' });
-        const tableAverage = emissionData?.averageValue;
-        const resultingData = (tableAverage/1360)*100;
+        /*const tableAverage = emissionData?.averageValue;*/
+        let resultingData = (carbValue/1360)*100;
 
         const surveyCircle = surveyCircleRef.current;
 
         let resultText = document.getElementById("SurveyResultText");
-        if(carbValue <= 160){
-            surveyCircle.style.left = `5%`;
-            surveyCircle.style.transition = 'left 1s ease-in-out';
-            resultText.innerText = "Dein Ergebnis ist sehr gut";
+
+
+        if (resultingData < 5){
+            resultingData = 5;
         }
-        else if(carbValue <= 460){
-            surveyCircle.style.left = `25%`;
-            surveyCircle.style.transition = 'left 1s ease-in-out';
-            resultText.innerText = "Dein Ergebnis ist gut";
+        else if (resultingData > 90){
+            resultingData = 90;
         }
-        else if(carbValue <= 900){
-            surveyCircle.style.left = `55%`;
-            surveyCircle.style.transition = 'left 1s ease-in-out';
-            resultText.innerText = "Dein Ergebnis ist schlecht";
+
+        surveyCircle.style.left = `${resultingData}%`;
+        surveyCircle.style.transition = 'left 1s ease-in-out';
+
+        if(resultingData <= 24){
+            resultText.innerText = "Dein Ergebnis ist sehr gut. Du bist ein Vorzeigebeispiel für den richtigen Umgang mit technischen Geräten.\n\nDein Ergebnis ist besser als der durchschnittliche CO2-Fußabdruck anderer Nutzer der momentan bei X kg/Woche liegt.\n\nDu leistest einen guten Beitrag, um der Vision einen gesunden Welt näher zu kommen;)";
+        }
+        else if(resultingData <= 48){
+            resultText.innerText = "Dein Ergebnis ist gut. Du bewegst dich um den Durchschnittlichen Wert herrum, der momentan X kg/Woche beträgt.\n\nDein Konsum ist in Ordnung lässt sich aber dennoch verbessern.\n\nMach weiter so:)";
+        }
+        else if(resultingData <= 73){
+
+            resultText.innerText = "Dein Ergebnis ist schlecht. Es bewegt sich unter dem durchschnittlichen CO2-Fußabdruck, der momentan X kg/Woche beträgt.\n\nDu solltest versuchen deinen Konsum elektronischer und IT-basierter Geräte reduzieren.\n\nNur so kannst du deinen CO2-Fußabdruck effektiv reduzieren.";
         }
         else {
-            surveyCircle.style.left = `90%`;
-            surveyCircle.style.transition = 'left 1s ease-in-out';
-            resultText.innerText = "Dein Ergebnis ist sehr schlecht";
+            resultText.innerText = "Dein Ergebnis ist sehr schlecht.\n\nEs bewegt sich weit über dem momentanen CO2-Fußabdruck, der momentan bei X kg/Woche liegt.";
         }
     }
 
@@ -289,7 +294,7 @@ const SurveyPage = () => {
                          style={{ left: '5%' }}
                     ></div>
                 </div>
-                <p id={"SurveyResultText"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste labore laboriosam nam suscipit tenetur. Adipisci aut debitis velit voluptate. Beatae deleniti dicta et explicabo, ipsa ipsam iure voluptatum. Aspernatur dignissimos dolorum excepturi expedita ipsa libero optio rerum, ut. Animi assumenda enim esse facere facilis harum ipsum iure, magnam molestiae mollitia possimus repudiandae? Accusantium assumenda deleniti, deserunt dolore eos expedita ipsa, magni mollitia neque, nulla perferendis quam quisquam sapiente unde veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis consequatur culpa cum, cupiditate delectus distinctio doloremque dolorum enim eos et excepturi exercitationem iusto molestiae nesciunt nobis obcaecati officiis pariatur quam recusandae repellat sequi similique tenetur totam ut veritatis voluptate?</p>
+                <p id={"SurveyResultText"}></p>
                 <motion.div
                     className="submitButton"
                     style ={{
