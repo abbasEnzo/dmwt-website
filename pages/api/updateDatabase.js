@@ -4,8 +4,8 @@ export default async function handler(request, response) {
     try {
         await sql`CREATE TABLE IF NOT EXISTS Emission (Value Double Precision)`;
         const {carbonValue} = JSON.parse(request.body)
-        await sql`INSERT INTO Emission (Value) VALUES (${+carbonValue});`;
-        return response.status(200).json( emission.rows);
+        await sql`INSERT INTO Emission (Value) VALUES (${carbonValue});`;
+        return response.status(200).json( {});
     } catch (error) {
         return response.status(500).json({ error });
     }

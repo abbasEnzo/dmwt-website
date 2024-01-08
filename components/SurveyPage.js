@@ -52,7 +52,7 @@ const SurveyPage = () => {
     const [socialMediaVisible, setSocialMediaVisible] = useState(false);
 
     const elements = [
-        { name: 'Computer', visible: computerVisible, value: 600},//Angaben in Kilogramm(kg)
+        { name: 'Computer', visible: computerVisible, value: 600},//Angaben in Kilogramm(kg) pro Woche
         { name: 'Controller', visible: controllerVisible, value: 150},
         { name: 'Printer', visible: printerVisible, value: 50},
         { name: 'TV', visible: tvVisible, value: 300},
@@ -62,16 +62,8 @@ const SurveyPage = () => {
 
     ];
 
-    const carbValue = elements.reduce((acc, { visible, value }) => acc + (visible ? value : 0), 0);
-
-    /*const {
-        data: emissionData,
-        isLoading,
-        isError: error
-    } = useSWR('/api/getAverage', fetcher, {
-        revalidateOnFocus: false,
-        revalidateOnReconnect: false
-    });*/
+    var carbValue = elements.reduce((acc, { visible, value }) => acc + (visible ? value : 0), 0);
+    carbValue = carbValue * 52 /1000; //Umrechnung in Tonnen im Jahr
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -85,11 +77,16 @@ const SurveyPage = () => {
             body: JSON.stringify(newValue)
         })
 
+        const response = await fetch('/api/getAverage');
+        const data = await response.json();
+
+        const avgValue = parseFloat(data.averageValue).toFixed(1);
+
         const section = document.getElementById("section6");
         section.scrollIntoView({ behavior: 'smooth' });
-        /*const tableAverage = emissionData?.averageValue;*/
-        let resultingData = (carbValue/1360)*100;
-        const tableAverage = 5;
+
+        let resultingData = (carbValue/(1360*52/1000))*100;
+
         const surveyCircle = surveyCircleRef.current;
 
         let resultText = document.getElementById("SurveyResultText");
@@ -106,16 +103,16 @@ const SurveyPage = () => {
         surveyCircle.style.transition = 'left 1s ease-in-out';
 
         if(resultingData <= 24){
-            resultText.innerText = `Congratulations! Your commitment to sustainable practices has yielded an outstanding result. Your carbon footprint is remarkably low, showcasing a commendable effort in minimizing environmental impact. Keep up the excellent work! Your dedication to green IT is making a significant difference. The average carbon footprint is ${tableAverage} metric tons per year. Your current carbon footprint is only ${resultingData} metric tons.`;
+            resultText.innerText = `Congratulations! Your commitment to sustainable practices has yielded an outstanding result. Your carbon footprint is remarkably low, showcasing a commendable effort in minimizing environmental impact. Keep up the excellent work! Your dedication to green IT is making a significant difference. The average carbon footprint is ${avgValue} metric tons per year. Your current carbon footprint is only ${carbValue} metric tons.`;
         }
         else if(resultingData <= 48){
-            resultText.innerText = `Well done! Your efforts in adopting green IT practices have led to a positive outcome. Your carbon footprint is quite low, reflecting a conscious effort to reduce environmental impact. Your commitment to sustainability is making a meaningful contribution. The average carbon footprint is ${tableAverage} metric tons per year. Your current carbon footprint is ${resultingData} metric tons.`;
+            resultText.innerText = `Well done! Your efforts in adopting green IT practices have led to a positive outcome. Your carbon footprint is quite low, reflecting a conscious effort to reduce environmental impact. Your commitment to sustainability is making a meaningful contribution. The average carbon footprint is ${avgValue} metric tons per year. Your current carbon footprint is ${carbValue} metric tons.`;
         }
         else if(resultingData <= 73){
-            resultText.innerText = `There\`s room for improvement. Your carbon footprint is high, indicating a need for adjustments in your IT practices. Consider exploring greener alternatives and energy-efficient solutions to reduce your environmental impact. The average carbon footprint is ${tableAverage} metric tons per year. Unfortunately, your current carbon footprint is ${resultingData} metric tons.`;
+            resultText.innerText = `There\`s room for improvement. Your carbon footprint is high, indicating a need for adjustments in your IT practices. Consider exploring greener alternatives and energy-efficient solutions to reduce your environmental impact. The average carbon footprint is ${avgValue} metric tons per year. Unfortunately, your current carbon footprint is ${carbValue} metric tons.`;
         }
         else {
-            resultText.innerText = `It\`s time to take significant steps towards sustainability. Your carbon footprint is considerably very high, highlighting the urgency to adopt greener IT practices. Consider energy-efficient devices, renewable energy sources, and other eco-friendly options. The average carbon footprint is ${tableAverage} metric tons per year. Unfortunately, your current carbon footprint is ${resultingData} metric tons.`;
+            resultText.innerText = `It\`s time to take significant steps towards sustainability. Your carbon footprint is considerably very high, highlighting the urgency to adopt greener IT practices. Consider energy-efficient devices, renewable energy sources, and other eco-friendly options. The average carbon footprint is ${avgValue} metric tons per year. Unfortunately, your current carbon footprint is ${carbValue} metric tons.`;
         }
     }
 
