@@ -7,7 +7,7 @@ import QuizPage from "../components/QuizPage";
 import OurVision from "../components/OurVision";
 import LoadingScreen from "../components/LoadingScreen";
 import Footer from "../components/Footer"
-
+import { Helmet } from 'react-helmet';
 
 function Home() {
     useEffect(() => {
@@ -40,7 +40,10 @@ function Home() {
 
     return (
         <div>
-
+            <Helmet>
+                <title>The Power Of Your Click</title>
+                <meta name="viewport" content="width=600, initial-scale=1.0"/>
+            </Helmet>
             <AgendaBox></AgendaBox>
             <LoadingScreen></LoadingScreen>
             <LandingPage></LandingPage>

@@ -89,7 +89,7 @@ const SurveyPage = () => {
         section.scrollIntoView({ behavior: 'smooth' });
         /*const tableAverage = emissionData?.averageValue;*/
         let resultingData = (carbValue/1360)*100;
-
+        const tableAverage = 5;
         const surveyCircle = surveyCircleRef.current;
 
         let resultText = document.getElementById("SurveyResultText");
@@ -106,17 +106,16 @@ const SurveyPage = () => {
         surveyCircle.style.transition = 'left 1s ease-in-out';
 
         if(resultingData <= 24){
-            resultText.innerText = "Dein Ergebnis ist sehr gut. Du bist ein Vorzeigebeispiel für den richtigen Umgang mit technischen Geräten.\n\nDein Ergebnis ist besser als der durchschnittliche CO2-Fußabdruck anderer Nutzer der momentan bei X kg/Woche liegt.\n\nDu leistest einen guten Beitrag, um der Vision einen gesunden Welt näher zu kommen;)";
+            resultText.innerText = `Congratulations! Your commitment to sustainable practices has yielded an outstanding result. Your carbon footprint is remarkably low, showcasing a commendable effort in minimizing environmental impact. Keep up the excellent work! Your dedication to green IT is making a significant difference. The average carbon footprint is ${tableAverage} metric tons per year. Your current carbon footprint is only ${resultingData} metric tons.`;
         }
         else if(resultingData <= 48){
-            resultText.innerText = "Dein Ergebnis ist gut. Du bewegst dich um den Durchschnittlichen Wert herrum, der momentan X kg/Woche beträgt.\n\nDein Konsum ist in Ordnung lässt sich aber dennoch verbessern.\n\nMach weiter so:)";
+            resultText.innerText = `Well done! Your efforts in adopting green IT practices have led to a positive outcome. Your carbon footprint is quite low, reflecting a conscious effort to reduce environmental impact. Your commitment to sustainability is making a meaningful contribution. The average carbon footprint is ${tableAverage} metric tons per year. Your current carbon footprint is ${resultingData} metric tons.`;
         }
         else if(resultingData <= 73){
-
-            resultText.innerText = "Dein Ergebnis ist schlecht. Es bewegt sich unter dem durchschnittlichen CO2-Fußabdruck, der momentan X kg/Woche beträgt.\n\nDu solltest versuchen deinen Konsum elektronischer und IT-basierter Geräte reduzieren.\n\nNur so kannst du deinen CO2-Fußabdruck effektiv reduzieren.";
+            resultText.innerText = `There\`s room for improvement. Your carbon footprint is high, indicating a need for adjustments in your IT practices. Consider exploring greener alternatives and energy-efficient solutions to reduce your environmental impact. The average carbon footprint is ${tableAverage} metric tons per year. Unfortunately, your current carbon footprint is ${resultingData} metric tons.`;
         }
         else {
-            resultText.innerText = "Dein Ergebnis ist sehr schlecht.\n\nEs bewegt sich weit über dem momentanen CO2-Fußabdruck, der momentan bei X kg/Woche liegt.";
+            resultText.innerText = `It\`s time to take significant steps towards sustainability. Your carbon footprint is considerably very high, highlighting the urgency to adopt greener IT practices. Consider energy-efficient devices, renewable energy sources, and other eco-friendly options. The average carbon footprint is ${tableAverage} metric tons per year. Unfortunately, your current carbon footprint is ${resultingData} metric tons.`;
         }
     }
 
@@ -192,7 +191,7 @@ const SurveyPage = () => {
     return (
         <div className={'surveyPageBox'}>
             <div id="section5" style={{}}>
-                <Parallax className={'surveyImage'} bgImage={'/stage3.webp'} strength={600} blur={4}>
+                <Parallax className={'surveyImage'} bgImage={'/surveyBackground.webp'} strength={600} blur={4}>
                     <div className={'container'}>
                         <h1 style={{
                             bottom: "34vh"
@@ -210,8 +209,7 @@ const SurveyPage = () => {
                                         onLoad={onLoad}/>
                             </Suspense>
                             <div className="SurveyButtonBox">
-                                <h3 style={{position: "absolute", bottom: "47vh", left: "9vh"}}>What devices are you
-                                    using?</h3>
+                                <p style={{position: "absolute", bottom: "45vh", left: "9vh", fontWeight: "bold", fontSize: "30px"}}>Which of the following Products are you using in your everyday life?</p>
                                 <motion.div
                                             style={{
                                                 position: 'absolute',
@@ -294,7 +292,7 @@ const SurveyPage = () => {
                          style={{ left: '5%' }}
                     ></div>
                 </div>
-                <p id={"SurveyResultText"}></p>
+                <p style={{fontSize: "30px"}} id={"SurveyResultText"}></p>
                 <motion.div
                     className="submitButton"
                     style ={{
@@ -315,8 +313,6 @@ const SurveyPage = () => {
                     whileHover={{ scale : 1.05, backgroundColor: 'rgb(91, 195, 126)' }}
                     whileTap={{ scale: 0.95, backgroundColor: '#D9D9D9' }}
                     onClick={handleSubmit}
-
-
                 >Submit your Answers
                 </motion.div>
             </div>

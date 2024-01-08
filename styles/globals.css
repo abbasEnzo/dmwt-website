@@ -43,7 +43,7 @@
 }
 p{
     position: relative;
-    font-size: 20px;
+    font-size: 23px;
     color: white;
     font-family: 'Lexend', sans-serif;
     text-align: center;
@@ -224,7 +224,7 @@ h4{
 .QuizTrueFalseBox{
     position: relative;
     bottom: 2vh;
-    left: 25vh;
+    left: 31vh;
     /*    background-color: #5bc37e;*/
     width: 40vh;
     height: 10vh;
@@ -239,13 +239,25 @@ h4{
     rotate: 90deg;
 
 }
-.ourVisionBox{
+.ourVisionBox1{
     top:35vh;
     display: block;
     align-items: center;
     background-color: #2d2d2d;
     width: 90vh;
-    height: 35vh;
+    height: 50vh;
+    z-index: 2000;
+    position: absolute;
+    text-align: justify;
+    border-radius: 10px;
+}
+.ourVisionBox{
+    top:30vh;
+    display: block;
+    align-items: center;
+    background-color: #2d2d2d;
+    width: 87.5vh;
+    height: 40vh;
     z-index: 2000;
     position: absolute;
     text-align: justify;
@@ -373,3 +385,5 @@ h4{
     opacity: 0;
     width: 0%;
 }
+
+
