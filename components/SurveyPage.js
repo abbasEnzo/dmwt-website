@@ -202,7 +202,7 @@ const SurveyPage = () => {
                                 backgroundColor: "black"
                             }}>Loading...</div>}>
                                 <Spline className="SurveyRoom"
-                                        scene="https://prod.spline.design/f7J4904xE0FbT9p9/scene.splinecode"
+                                        scene="https://draft.spline.design/561zVM-0igtYp0Hv/scene.splinecode"
                                         onLoad={onLoad}/>
                             </Suspense>
                             <div className="SurveyButtonBox">
