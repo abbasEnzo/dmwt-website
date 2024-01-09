@@ -385,5 +385,9 @@ h4{
     opacity: 0;
     width: 0%;
 }
+.disableHoverOnButton:hover{
+    pointer-events: none; /* Deaktiviere Hover-Effekt*/
+
+}
 
 

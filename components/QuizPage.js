@@ -14,6 +14,8 @@ function QuizPage(){
         let falseButton = document.getElementById("QuestionOneFalseButton");
         trueButton.disabled = true;
         falseButton.disabled = true;
+        falseButton.classList.add("disableHoverOnButton");
+        trueButton.classList.add("disableHoverOnButton");
         resultText.innerText = 'True, that means your personal lifestyle has a huge impact on climate change';
         resultText.style.position = "absolute";
         questionOneBox.style.top = "22vh";
@@ -25,6 +27,8 @@ function QuizPage(){
         let falseButton = document.getElementById("QuestionOneFalseButton");
         trueButton.disabled = true;
         falseButton.disabled = true;
+        falseButton.classList.add("disableHoverOnButton");
+        trueButton.classList.add("disableHoverOnButton");
         resultText.innerText = 'False, One\'s personal lifestyle really contributes approximately 30% to the global CO2 emissions';
         resultText.style.position = "absolute";
         questionOneBox.style.top = "22vh";
@@ -36,6 +40,8 @@ function QuizPage(){
         let falseButton = document.getElementById("QuestionTwoFalseButton");
         trueButton.disabled = true;
         falseButton.disabled = true;
+        falseButton.classList.add("disableHoverOnButton");
+        trueButton.classList.add("disableHoverOnButton");
         resultText.innerText = 'False, through the use of energy-efficient electrical appliances up to 80% of electricity consumption could be saved';
         resultText.style.position = "absolute";
         questionTwoBox.style.top = "22vh";
@@ -47,6 +53,8 @@ function QuizPage(){
         let falseButton = document.getElementById("QuestionTwoFalseButton");
         trueButton.disabled = true;
         falseButton.disabled = true;
+        falseButton.classList.add("disableHoverOnButton");
+        trueButton.classList.add("disableHoverOnButton");
         resultText.innerText = 'Your right, through the use of energy-efficient electrical appliances up to 80% of electricity consumption could be saved';
         resultText.style.position = "absolute";
         questionTwoBox.style.top = "22vh";
@@ -58,6 +66,8 @@ function QuizPage(){
         let falseButton = document.getElementById("QuestionThreeFalseButton");
         trueButton.disabled = true;
         falseButton.disabled = true;
+        falseButton.classList.add("disableHoverOnButton");
+        trueButton.classList.add("disableHoverOnButton");
         resultText.innerText = 'True, on average, teenagers play 840 hours of online games per year, leading to an approximate yearly carbon dioxide emission of 1.2 tons per teenager';
         resultText.style.position = "absolute";
         questionThreeBox.style.top = "27vh";
@@ -69,8 +79,11 @@ function QuizPage(){
         let falseButton = document.getElementById("QuestionThreeFalseButton");
         trueButton.disabled = true;
         falseButton.disabled = true;
+        falseButton.classList.add("disableHoverOnButton");
+        trueButton.classList.add("disableHoverOnButton");
         resultText.innerText = 'Unfortunately it`s true, on average, teenagers play 840 hours of online games per year, leading to an approximate yearly carbon dioxide emission of 1.2 tons per teenager';
         resultText.style.position = "absolute";
+        resultText.style.bottom = "8vh";
         questionThreeBox.style.top = "27vh";
     };
     const [firstQuestionTrueClicked, setfirstQuestionTrueisClicked] = useState(false);
@@ -103,6 +116,7 @@ function QuizPage(){
         setThridQuestionFalseisClicked(!ThridQuestionFalseClicked);
         handleQuestionThreeTextChangeFalse();
     };
+
     return(
         <div className={"QuizPageBackground"}>
             <div id="section4">
