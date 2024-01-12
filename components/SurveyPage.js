@@ -297,7 +297,7 @@ const SurveyPage = () => {
                         width: '50vh',
                         position: 'absolute',
                         left: '130vh',
-                        top: '-15.8vh',
+                        bottom: '66.5vh',
                         borderRadius: '50px',
                         backgroundColor: 'gray',
                         textAlign: 'center',

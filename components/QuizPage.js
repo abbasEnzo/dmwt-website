@@ -104,8 +104,22 @@ function QuizPage(){
         handleQuestionThreeTextChangeFalse();
     };
     return(
+
         <div className={"QuizPageBackground"}>
             <div id="section4">
+                <h1 style={{
+                    position: "absolute",
+                    top: "1.75vh",
+                    left:"8vh",
+                    rotate:"-30deg",
+                }}>Quiz</h1>
+                <p style={{
+                    position: "absolute",
+                    top: "12vh",
+                    left:"5vh",
+                    rotate:"-30deg",
+                    fontSize:"35px",
+                }}>Test your knowledge</p>
             <div className={"QuestionBox"} id={"QuestionBox1"}>
                 <h3 id={"QuestionOneText"}>One's personal lifestyle contribute approximately 30% to the global CO2 emissions</h3>
                 <div className="QuizTrueFalseBox" id={"QuestionOneButtonBox"}>

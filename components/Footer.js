@@ -13,7 +13,7 @@ function Footer() {
         <div id="section8" style={{ zIndex: 1001,}}>
             <h3 style={{
                 position:"absolute",
-                left:"32vh",
+                left:"32.25vh",
                 whiteSpace: "nowrap",
                 top:"1.5vh",
             }}>Newsletter</h3>
@@ -21,7 +21,7 @@ function Footer() {
             <motion.button style={{}} whileHover={{color: "rgb(91, 195, 126)"}}  id={"emailInputButton"}>Subscribe</motion.button>
             <h3 style={{
                 position:"absolute",
-                right:"40vh",
+                right:"38.5vh",
                 whiteSpace: "nowrap",
                 top:"0vh",
             }}>Our Socials</h3>
